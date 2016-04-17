@@ -14,6 +14,8 @@
 		3DFA12021CC3AA9100A48515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA12001CC3AA9100A48515 /* LaunchScreen.storyboard */; };
 		3DFA120D1CC3AA9100A48515 /* otiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA120C1CC3AA9100A48515 /* otiumTests.swift */; };
 		3DFA12181CC3AA9100A48515 /* otiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA12171CC3AA9100A48515 /* otiumUITests.swift */; };
+		3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA12271CC3AC5C00A48515 /* Peripheral.swift */; };
+		3DFA122A1CC3B16D00A48515 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFA12291CC3B16D00A48515 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3DFA12131CC3AA9100A48515 /* otiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFA12171CC3AA9100A48515 /* otiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otiumUITests.swift; sourceTree = "<group>"; };
 		3DFA12191CC3AA9100A48515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DFA12271CC3AC5C00A48515 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		3DFA12291CC3B16D00A48515 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFA122A1CC3B16D00A48515 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		3DFA11EB1CC3AA9000A48515 = {
 			isa = PBXGroup;
 			children = (
+				3DFA12291CC3B16D00A48515 /* CoreLocation.framework */,
 				3DFA11F61CC3AA9100A48515 /* otium */,
 				3DFA120B1CC3AA9100A48515 /* otiumTests */,
 				3DFA12161CC3AA9100A48515 /* otiumUITests */,
@@ -99,6 +105,7 @@
 			children = (
 				3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */,
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
+				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
 				3DFA11FE1CC3AA9100A48515 /* Assets.xcassets */,
 				3DFA12001CC3AA9100A48515 /* LaunchScreen.storyboard */,
@@ -258,6 +265,7 @@
 			files = (
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
+				3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
