@@ -16,6 +16,7 @@
 		3DFA12181CC3AA9100A48515 /* otiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA12171CC3AA9100A48515 /* otiumUITests.swift */; };
 		3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA12271CC3AC5C00A48515 /* Peripheral.swift */; };
 		3DFA122A1CC3B16D00A48515 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFA12291CC3B16D00A48515 /* CoreLocation.framework */; };
+		3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA122B1CC3E89600A48515 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3DFA12191CC3AA9100A48515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFA12271CC3AC5C00A48515 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
 		3DFA12291CC3B16D00A48515 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3DFA122B1CC3E89600A48515 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */,
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
+				3DFA122B1CC3E89600A48515 /* Configuration.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
 				3DFA11FE1CC3AA9100A48515 /* Assets.xcassets */,
 				3DFA12001CC3AA9100A48515 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
+				3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */,
 				3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

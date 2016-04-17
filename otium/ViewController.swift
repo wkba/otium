@@ -12,7 +12,7 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
-    let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "aaaabbbb-aaaa-aaaa-aaaa-aaaabbbbcccc")!, identifier: "Estimotes")
+    let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: Configuration.UUID())!, identifier: "Estimotes")
     let colors = [
         0: UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
         1: UIColor(red: 142/255, green: 212/255, blue: 220/255, alpha: 1),
