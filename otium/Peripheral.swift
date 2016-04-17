@@ -11,10 +11,10 @@ import CoreLocation
 class Peripheral: CBPeripheralManager {
     
     private static let sharedInstance = Peripheral()
-    private let beaconIdentifier = ""
-    private let uuidString = "aaaabbbb-aaaa-aaaa-aaaa-aaaabbbbcccc"
-    private let major: CLBeaconMajorValue = CLBeaconMajorValue(arc4random() % 100)
-    private let minor: CLBeaconMinorValue = CLBeaconMinorValue(arc4random() % 3)
+    private let beaconIdentifier = Configuration.Identifier()
+    private let uuidString = Configuration.UUID()
+    private let major = Configuration.Major()
+    private let minor = Configuration.Minor()
     
     static func startAdvertising() {
         sharedInstance.delegate = sharedInstance
