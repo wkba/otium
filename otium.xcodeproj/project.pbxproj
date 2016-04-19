@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1D53E31CC60D45008EBDEF /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D53E21CC60D45008EBDEF /* Pulse.swift */; };
 		3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */; };
 		3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA11F91CC3AA9100A48515 /* ViewController.swift */; };
 		3DFA11FD1CC3AA9100A48515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA11FB1CC3AA9100A48515 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1D53E21CC60D45008EBDEF /* Pulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
 		3DFA11F41CC3AA9100A48515 /* otium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFA11F91CC3AA9100A48515 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
 				3DFA122B1CC3E89600A48515 /* Configuration.swift */,
+				3D1D53E21CC60D45008EBDEF /* Pulse.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
 				3DFA11FE1CC3AA9100A48515 /* Assets.xcassets */,
 				3DFA12001CC3AA9100A48515 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
 				3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */,
+				3D1D53E31CC60D45008EBDEF /* Pulse.swift in Sources */,
 				3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +500,7 @@
 				3DFA121E1CC3AA9100A48515 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DFA121F1CC3AA9100A48515 /* Build configuration list for PBXNativeTarget "otiumTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +509,7 @@
 				3DFA12211CC3AA9100A48515 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DFA12221CC3AA9100A48515 /* Build configuration list for PBXNativeTarget "otiumUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +518,7 @@
 				3DFA12241CC3AA9100A48515 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
