@@ -24,6 +24,8 @@
 		3DFB06171CC91FB900D96693 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB06161CC91FB900D96693 /* Screen.swift */; };
 		3DFB06191CC92E8B00D96693 /* LovePercent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB06181CC92E8B00D96693 /* LovePercent.swift */; };
 		3DFB061B1CC9311200D96693 /* connectFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB061A1CC9311200D96693 /* connectFirebase.swift */; };
+		3DFB06201CC93CCD00D96693 /* InitialSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB061F1CC93CCD00D96693 /* InitialSetting.swift */; };
+		3DFB06221CC93ECF00D96693 /* AccessNSUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB06211CC93ECF00D96693 /* AccessNSUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		3DFB06161CC91FB900D96693 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3DFB06181CC92E8B00D96693 /* LovePercent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovePercent.swift; sourceTree = "<group>"; };
 		3DFB061A1CC9311200D96693 /* connectFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = connectFirebase.swift; sourceTree = "<group>"; };
+		3DFB061F1CC93CCD00D96693 /* InitialSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSetting.swift; sourceTree = "<group>"; };
+		3DFB06211CC93ECF00D96693 /* AccessNSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessNSUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +123,12 @@
 		3DFA11F61CC3AA9100A48515 /* otium */ = {
 			isa = PBXGroup;
 			children = (
+				3DFB061E1CC93C5D00D96693 /* config */,
 				3DFB061D1CC9322500D96693 /* image */,
 				3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */,
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
 				3DFB06161CC91FB900D96693 /* Screen.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
-				3DFA122B1CC3E89600A48515 /* Configuration.swift */,
 				3D1D53E21CC60D45008EBDEF /* Pulsator.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
 				3DFB06181CC92E8B00D96693 /* LovePercent.swift */,
@@ -162,6 +166,16 @@
 				3D1D53EA1CC69B79008EBDEF /* question.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		3DFB061E1CC93C5D00D96693 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				3DFA122B1CC3E89600A48515 /* Configuration.swift */,
+				3DFB06211CC93ECF00D96693 /* AccessNSUserDefaults.swift */,
+				3DFB061F1CC93CCD00D96693 /* InitialSetting.swift */,
+			);
+			name = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +315,11 @@
 				3DFB06191CC92E8B00D96693 /* LovePercent.swift in Sources */,
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
+				3DFB06201CC93CCD00D96693 /* InitialSetting.swift in Sources */,
 				3DFB061B1CC9311200D96693 /* connectFirebase.swift in Sources */,
 				3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */,
 				3D1D53E31CC60D45008EBDEF /* Pulsator.swift in Sources */,
+				3DFB06221CC93ECF00D96693 /* AccessNSUserDefaults.swift in Sources */,
 				3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */,
 				3DFB06171CC91FB900D96693 /* Screen.swift in Sources */,
 			);

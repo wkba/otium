@@ -19,6 +19,7 @@ class LovePercent {
     }
     func getPercent()->Int{
         //Demo Date
+        //ここで計算をする。
         return 65
     }
 }

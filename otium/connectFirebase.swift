@@ -9,14 +9,18 @@
 import Foundation
 
 class connectFirebase{
-    var targetID = 0
-    init(targetID:Int){
-        self.targetID = targetID
+
+
+    init(){
+
     }
     
-    func getProfile()->[String:String]{
+    func getProfile(_: Int)->[String:String]{
         let profile = ["test0":"0","test1":"1","test2":"2"]
         return profile
     }
+    
+    
+    
     
 }
