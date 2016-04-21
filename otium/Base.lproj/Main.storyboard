@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-cD-Xmq">
+                                <rect key="frame" x="84" y="92" width="433" height="415"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="7q3-3U-Qi9"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DKs-Da-B9K"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="iT0-rP-Jnc"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoh-gt-DJW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pulse" destination="4z3-cD-Xmq" id="pIm-dg-kmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="232"/>
         </scene>
     </scenes>
 </document>
