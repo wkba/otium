@@ -20,6 +20,10 @@
 		3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA12271CC3AC5C00A48515 /* Peripheral.swift */; };
 		3DFA122A1CC3B16D00A48515 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFA12291CC3B16D00A48515 /* CoreLocation.framework */; };
 		3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA122B1CC3E89600A48515 /* Configuration.swift */; };
+		3DFB06151CC916F500D96693 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFB06141CC916F500D96693 /* profile.png */; };
+		3DFB06171CC91FB900D96693 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB06161CC91FB900D96693 /* Screen.swift */; };
+		3DFB06191CC92E8B00D96693 /* LovePercent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB06181CC92E8B00D96693 /* LovePercent.swift */; };
+		3DFB061B1CC9311200D96693 /* connectFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB061A1CC9311200D96693 /* connectFirebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		3DFA12271CC3AC5C00A48515 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
 		3DFA12291CC3B16D00A48515 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3DFA122B1CC3E89600A48515 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		3DFB06141CC916F500D96693 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		3DFB06161CC91FB900D96693 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		3DFB06181CC92E8B00D96693 /* LovePercent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovePercent.swift; sourceTree = "<group>"; };
+		3DFB061A1CC9311200D96693 /* connectFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = connectFirebase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				3DFA12291CC3B16D00A48515 /* CoreLocation.framework */,
-				3DFA11F61CC3AA9100A48515 /* otium */,
 				3DFA120B1CC3AA9100A48515 /* otiumTests */,
 				3DFA12161CC3AA9100A48515 /* otiumUITests */,
 				3DFA11F51CC3AA9100A48515 /* Products */,
+				3DFA11F61CC3AA9100A48515 /* otium */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,14 +119,16 @@
 		3DFA11F61CC3AA9100A48515 /* otium */ = {
 			isa = PBXGroup;
 			children = (
+				3DFB061D1CC9322500D96693 /* image */,
 				3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */,
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
+				3DFB06161CC91FB900D96693 /* Screen.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
 				3DFA122B1CC3E89600A48515 /* Configuration.swift */,
-				3D1D53E41CC698D9008EBDEF /* gear.png */,
-				3D1D53EA1CC69B79008EBDEF /* question.png */,
 				3D1D53E21CC60D45008EBDEF /* Pulsator.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
+				3DFB06181CC92E8B00D96693 /* LovePercent.swift */,
+				3DFB061A1CC9311200D96693 /* connectFirebase.swift */,
 				3DFA11FE1CC3AA9100A48515 /* Assets.xcassets */,
 				3DFA12001CC3AA9100A48515 /* LaunchScreen.storyboard */,
 				3DFA12031CC3AA9100A48515 /* Info.plist */,
@@ -142,6 +152,16 @@
 				3DFA12191CC3AA9100A48515 /* Info.plist */,
 			);
 			path = otiumUITests;
+			sourceTree = "<group>";
+		};
+		3DFB061D1CC9322500D96693 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				3D1D53E41CC698D9008EBDEF /* gear.png */,
+				3DFB06141CC916F500D96693 /* profile.png */,
+				3D1D53EA1CC69B79008EBDEF /* question.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1D53EB1CC69B79008EBDEF /* question.png in Resources */,
+				3DFB06151CC916F500D96693 /* profile.png in Resources */,
 				3DFA12021CC3AA9100A48515 /* LaunchScreen.storyboard in Resources */,
 				3DFA11FF1CC3AA9100A48515 /* Assets.xcassets in Resources */,
 				3D1D53E51CC698D9008EBDEF /* gear.png in Resources */,
@@ -277,11 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFB06191CC92E8B00D96693 /* LovePercent.swift in Sources */,
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
+				3DFB061B1CC9311200D96693 /* connectFirebase.swift in Sources */,
 				3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */,
 				3D1D53E31CC60D45008EBDEF /* Pulsator.swift in Sources */,
 				3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */,
+				3DFB06171CC91FB900D96693 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

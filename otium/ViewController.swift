@@ -9,8 +9,9 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var noFriendLabel: UILabel!
     @IBOutlet weak var pulse: UIView!
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: Configuration.UUID())!, identifier: "Estimotes")
@@ -21,18 +22,89 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         3: UIColor(red: 209/255, green: 22/255, blue: 49/255, alpha: 1)
     ]
     let pulsator = Pulsator()
-
+    let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+    
+    private var pageControl: UIPageControl!
+    private var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        // ビューの縦、横のサイズを取得する.
+        let width = self.view.frame.maxX, height = self.view.frame.maxY
+        // ScrollViewを取得する.
+        scrollView = UIScrollView(frame: self.view.frame)
+        // ページ数を定義する.
+        let pageSize = 4
+        // 縦方向と、横方向のインディケータを非表示にする.
+        scrollView.showsHorizontalScrollIndicator = false;
+        scrollView.showsVerticalScrollIndicator = false
+        // ページングを許可する.
+        scrollView.pagingEnabled = true
+        // ScrollViewのデリゲートを設定する.
+        scrollView.delegate = self
+        // スクロールの画面サイズを指定する.
+        scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
+        // ScrollViewをViewに追加する.
+        self.view.addSubview(scrollView)
+    
+        // ページ数分ボタンを生成する.
+        for var i = 0; i < pageSize; i++ {
+            
+            // loveLabelを生成する.
+            let loveLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 80, 60, 30))
+            loveLabel.textColor = UIColor.whiteColor()
+            loveLabel.textAlignment = NSTextAlignment.Center
+            loveLabel.text = "相性: \(i)"
+            loveLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+            scrollView.addSubview(loveLabel)
+            
+            // distanceLabelを生成する.
+            let distanceLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 50, 60, 30))
+            distanceLabel.textColor = UIColor.whiteColor()
+            distanceLabel.textAlignment = NSTextAlignment.Center
+            distanceLabel.text = "距離: \(i)"
+            distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+            
+            scrollView.addSubview(distanceLabel)
+        }
+        
+        // PageControlを作成する.
+        pageControl = UIPageControl(frame: CGRectMake(0, self.view.frame.maxY - 100, width, 50))
+        
+        // PageControlするページ数を設定する.
+        pageControl.numberOfPages = pageSize
+        
+        // 現在ページを設定する.
+        pageControl.currentPage = 0
+        pageControl.userInteractionEnabled = false
+        
+        self.view.addSubview(pageControl)
+        
+        
+        
+        
         
         
         pulse.layer.superlayer?.insertSublayer(pulsator, below: pulse.layer)
         setupInitialValues()
         pulsator.start()
-        
         setBackgroundColor()
         //animetion()
+        
+        
+        let settingBtn = UIButton()
+        settingBtn.frame = CGRectMake(20, 40, 45, 45)
+        settingBtn.setImage(UIImage(named: "gear.png"), forState: .Normal)
+        settingBtn.imageView?.contentMode = .ScaleAspectFit
+        self.view.addSubview(settingBtn)
+        
+        let questionBtn = UIButton()
+        questionBtn.frame = CGRectMake(myBoundSize.width - 20 - 45, 40, 45, 45)
+        questionBtn.setImage(UIImage(named: "question.png"), forState: .Normal)
+        questionBtn.imageView?.contentMode = .ScaleAspectFit
+        self.view.addSubview(questionBtn)
 
         
         //MARK: central
@@ -119,11 +191,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     private func setupInitialValues() {
-        pulsator.numPulse = 3
+        pulsator.numPulse = 1
         pulsator.radius = 240.0
         pulsator.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).CGColor
     }
 
-
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        
+        // スクロール数が1ページ分になったら時.
+        if fmod(scrollView.contentOffset.x, scrollView.frame.maxX) == 0 {
+            // ページの場所を切り替える.
+            pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.maxX)
+        }
+    }
 }
 
