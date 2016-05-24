@@ -1,0 +1,1015 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21B13C6F8CCFB112DF9329416FB5A6E3 /* Pods-otiumTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D26406B905E8F9104930FCA14C071A37 /* Pods-otiumTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DACE99921668007FA280EE7F6890CF9 /* Pods-otium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E5393A9987EF27B6A1E5A03CC1779C /* Pods-otium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32BC28F2D8F762BB77955237D0B1733A /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07806B219E7A9D21A6DDBB39B23A57 /* Controllers.swift */; };
+		33ED311FF3DB5C41984E6843914638BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		369243DC00210AD0807577694D58AF67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		376DCCF04020C1BF909E1C9434160EC9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF661D12BD55BB6F4AC3EA03AC619D /* Helpers.swift */; };
+		4CC8D349E1F05E10C3FBEB82314971FE /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C2D945280D7F5B79F266E40828D5B9 /* Cells.swift */; };
+		67EBF3083F5A7E32E4561969AB17F492 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		7E25AAD110FBD601680BB0B15DB670A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		94026EE895026B940FB818A7E6538B50 /* Rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1125C7CB560E19BC79D6313534D024 /* Rows.swift */; };
+		9F55540302E9D0F8DBE8C934DCF64838 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E99BCC53E7ECD471F1E6F0FBB353C9CF /* Eureka-dummy.m */; };
+		B55EB3902AFF61D34ED21E161AB09E98 /* Pods-otiumUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B159C01D2885785A35600FFAB4BF73BD /* Pods-otiumUITests-dummy.m */; };
+		C36CAC4A3C94D36C0B424C26791EA98B /* Pods-otium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6340EA01013392A97C710D35D00EFE6D /* Pods-otium-dummy.m */; };
+		D8E82E9F2990BBF4AC7BD2CE261A6811 /* Pods-otiumTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF5A4F9F1478545E22BB1BEFA2B72A /* Pods-otiumTests-dummy.m */; };
+		D9CC031177F4B3BB836A25DA8339FAC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		DA3C8A59CE20DB259E912AAF6787B6B4 /* Pods-otiumUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 877CE8515AE451C2DB48B9864E3F61F9 /* Pods-otiumUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E52D5180B8080C290DB1BE94C2B97172 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2B6BA8A8FD4B34E5830803E9DEC771 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4549889D2DD51FD242EF19E8DE29A7A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0B6FE524522CD817C70A402A433C5 /* Core.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0921977D93A802EE02A7806D2EBF6EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31EF08F3444DCD2B169D92269C5BCD3D;
+			remoteInfo = Eureka;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E2BDE52CE8C042477B87C1705E55AE3 /* Pods-otiumTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-otiumTests.modulemap"; sourceTree = "<group>"; };
+		0E78F6039909914A81D901604269B83A /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = iOS/TwitterCore.framework; sourceTree = "<group>"; };
+		16E587A9CEC501F758A113E0AFAD50A2 /* Pods-otium-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otium-frameworks.sh"; sourceTree = "<group>"; };
+		174F50C9C72E19056CD73F1544BE679F /* Pods-otium-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-otium-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1BAD7B6387F3C903E6E775897D3A2965 /* Pods-otiumTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumTests-frameworks.sh"; sourceTree = "<group>"; };
+		1CE3E2ABF45A0A81FBAFFFFF9DC42518 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		23CF00104495F8C8CD5E4917D2C53651 /* Pods-otium-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otium-resources.sh"; sourceTree = "<group>"; };
+		3655E3517AB6B834FF5E982C6908D51F /* Pods-otium-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-otium-acknowledgements.plist"; sourceTree = "<group>"; };
+		3697E7646331E92D34B55F6D43D4C508 /* Pods-otiumUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-otiumUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3CB7A223B378377E48BD72B68D3AD42A /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		404EDFE251B3F6B1F0BAF22034C5774B /* Pods-otiumUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumUITests-frameworks.sh"; sourceTree = "<group>"; };
+		41C2D945280D7F5B79F266E40828D5B9 /* Cells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cells.swift; path = Source/Cells.swift; sourceTree = "<group>"; };
+		41D65C75038911A029FBAADF3D21F53A /* Pods-otiumTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-otiumTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		505684E40094CEBD361EE8FF029C68B4 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		52F986DB8D4EA675DA94A28D9F7B77F9 /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
+		532435EEC1EFB96F2EFEA2B506E7469A /* Pods-otiumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5BF3E62FD314E216B1E2EC78551D1738 /* Pods_otiumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otiumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CEA05D765247936AF34B76491707F98 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
+		62A4C16082A39E69779E65157C0034BC /* Pods_otiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6340EA01013392A97C710D35D00EFE6D /* Pods-otium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-otium-dummy.m"; sourceTree = "<group>"; };
+		685FE27DA1EBFD29F7ECE91ABBF2FC63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF333C1465CCD82D557BF56E5C28D68 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		778FB2CD76C3FC1580028544196B7A09 /* Pods-otiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ABAF753D6B7FFCE56B976EF22B0B783 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		839028A5B30A9EF48D3EDE618F5A062F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86284BADB6F0200363E00EA9F267AE10 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		877CE8515AE451C2DB48B9864E3F61F9 /* Pods-otiumUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-otiumUITests-umbrella.h"; sourceTree = "<group>"; };
+		8AF1D3321427F36512AD9BC41E4D2010 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C07806B219E7A9D21A6DDBB39B23A57 /* Controllers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = Source/Controllers.swift; sourceTree = "<group>"; };
+		8C305CE11DB8F1ACCA767982F895C622 /* Pods-otiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumTests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A54BC1DB1F55DFC58D190A9C987247C /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Eureka.modulemap; sourceTree = "<group>"; };
+		9B1125C7CB560E19BC79D6313534D024 /* Rows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rows.swift; path = Source/Rows.swift; sourceTree = "<group>"; };
+		9CD54C3DCBB619731B9A3B7A207A95A7 /* Pods-otium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otium.release.xcconfig"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A56D8A37A2BC4D38BF28196E1699E864 /* Pods-otium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-otium.modulemap"; sourceTree = "<group>"; };
+		A8F0B6FE524522CD817C70A402A433C5 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core.swift; sourceTree = "<group>"; };
+		AA66E18876D92F6542AC9B866C618C76 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		B12322FE24E68395E0C0356C146F7547 /* Pods-otiumTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-otiumTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B159C01D2885785A35600FFAB4BF73BD /* Pods-otiumUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-otiumUITests-dummy.m"; sourceTree = "<group>"; };
+		B40F6BC56BD2EC40C668400DBFB8C267 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EB272AEBFEAE55AA3A64085F329DC3 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8526CD4F0548C4FCD4B2B038A326E5 /* Pods_otium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFF661D12BD55BB6F4AC3EA03AC619D /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Helpers.swift; sourceTree = "<group>"; };
+		BE8F9350B610DD176BC4D6DA41D2D05A /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		C69113F888DD2D2641AD916D6D163FB9 /* Pods-otiumTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumTests-resources.sh"; sourceTree = "<group>"; };
+		C6E5393A9987EF27B6A1E5A03CC1779C /* Pods-otium-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-otium-umbrella.h"; sourceTree = "<group>"; };
+		D26406B905E8F9104930FCA14C071A37 /* Pods-otiumTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-otiumTests-umbrella.h"; sourceTree = "<group>"; };
+		D2F5CB3F50940FAFDB3A118AFD7AA4F0 /* Pods-otium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otium.debug.xcconfig"; sourceTree = "<group>"; };
+		D43A60564562196133220B18BD97BF61 /* Pods-otiumUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-otiumUITests.modulemap"; sourceTree = "<group>"; };
+		D683324F80982850F89E5AABD28D3AA9 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		DCEF5A4F9F1478545E22BB1BEFA2B72A /* Pods-otiumTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-otiumTests-dummy.m"; sourceTree = "<group>"; };
+		DE010A217C3D8CC899CA4076419E5ED1 /* Pods-otiumUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-otiumUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E99BCC53E7ECD471F1E6F0FBB353C9CF /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
+		ECF6DDEEBFF93719482743C0DB47111A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		F42F3E2D1BCA6F67502B338E11CAE074 /* Pods-otiumUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumUITests-resources.sh"; sourceTree = "<group>"; };
+		F5A55C1B2F8DEC453FA620E9CB9FD9F0 /* Pods-otiumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD2B6BA8A8FD4B34E5830803E9DEC771 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1427E14F8B17CB74380D9E53F264DDAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67EBF3083F5A7E32E4561969AB17F492 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8478523DD303C55B69F2B09E83AFB8BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CC031177F4B3BB836A25DA8339FAC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD02C174EF4E9DFDD57459A0C1F42C14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369243DC00210AD0807577694D58AF67 /* Foundation.framework in Frameworks */,
+				7E25AAD110FBD601680BB0B15DB670A9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62AE615DAD39A780CD43AFE4B9CC304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33ED311FF3DB5C41984E6843914638BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A01AE0EC3B63C38D772643DC03CA2AB /* Pods-otiumTests */ = {
+			isa = PBXGroup;
+			children = (
+				839028A5B30A9EF48D3EDE618F5A062F /* Info.plist */,
+				0E2BDE52CE8C042477B87C1705E55AE3 /* Pods-otiumTests.modulemap */,
+				B12322FE24E68395E0C0356C146F7547 /* Pods-otiumTests-acknowledgements.markdown */,
+				41D65C75038911A029FBAADF3D21F53A /* Pods-otiumTests-acknowledgements.plist */,
+				DCEF5A4F9F1478545E22BB1BEFA2B72A /* Pods-otiumTests-dummy.m */,
+				1BAD7B6387F3C903E6E775897D3A2965 /* Pods-otiumTests-frameworks.sh */,
+				C69113F888DD2D2641AD916D6D163FB9 /* Pods-otiumTests-resources.sh */,
+				D26406B905E8F9104930FCA14C071A37 /* Pods-otiumTests-umbrella.h */,
+				778FB2CD76C3FC1580028544196B7A09 /* Pods-otiumTests.debug.xcconfig */,
+				8C305CE11DB8F1ACCA767982F895C622 /* Pods-otiumTests.release.xcconfig */,
+			);
+			name = "Pods-otiumTests";
+			path = "Target Support Files/Pods-otiumTests";
+			sourceTree = "<group>";
+		};
+		1E7D1078F9BB364E8B2547761DDF09DE /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				721F7BCC9758A0FEF26C7DC374AD374A /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		2895B844E84CF44CBCC917F7A0F6AB9D /* TwitterCore */ = {
+			isa = PBXGroup;
+			children = (
+				AA7858F22BCDF99837775CA57258E733 /* Frameworks */,
+			);
+			path = TwitterCore;
+			sourceTree = "<group>";
+		};
+		28B59A532D7082B41883C38B98995F27 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D2FF22F162905C95C4C67185984A981C /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2D7FD5713B3AA1AEE9965D9F009EF0D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E642022AD1B5C57CFD6D90A60A5402C6 /* Eureka */,
+				412E6C8BF6F86C76599D939B4892087E /* Fabric */,
+				28B59A532D7082B41883C38B98995F27 /* Firebase */,
+				5236836E9DF108E661F7CF64D91009E8 /* FirebaseAnalytics */,
+				86DC7015C631414E94CEACAE721C1193 /* FirebaseInstanceID */,
+				BD56E407A1413505421BC36A1C961CFA /* GoogleInterchangeUtilities */,
+				DC1E9178C1E8D129DC8AD76064BF6C03 /* GoogleSymbolUtilities */,
+				1E7D1078F9BB364E8B2547761DDF09DE /* GoogleUtilities */,
+				2895B844E84CF44CBCC917F7A0F6AB9D /* TwitterCore */,
+				D8D8221C652DC99D8167AF3FD38A2094 /* TwitterKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3054C946CACA99B2495E2D098FA9E9AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86284BADB6F0200363E00EA9F267AE10 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FE830060370BA52369C29CC1C892FAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE8F9350B610DD176BC4D6DA41D2D05A /* TwitterKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		412E6C8BF6F86C76599D939B4892087E /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				902071372AA4BE0E3D6CD9979094EE08 /* Frameworks */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5236836E9DF108E661F7CF64D91009E8 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				CEE7FC72A298D96B76C262BC01C7C59C /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		584F46601B6EFFB6913B25BADA7BB7F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5EB272AEBFEAE55AA3A64085F329DC3 /* Eureka.framework */,
+				BC8526CD4F0548C4FCD4B2B038A326E5 /* Pods_otium.framework */,
+				62A4C16082A39E69779E65157C0034BC /* Pods_otiumTests.framework */,
+				5BF3E62FD314E216B1E2EC78551D1738 /* Pods_otiumUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EF9CA8D7A4A335B4FC47A5F9B9BC382 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D683324F80982850F89E5AABD28D3AA9 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		665EBCDF517FC8EBABD7A8D1DA2122CD /* Pods-otiumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8AF1D3321427F36512AD9BC41E4D2010 /* Info.plist */,
+				D43A60564562196133220B18BD97BF61 /* Pods-otiumUITests.modulemap */,
+				3697E7646331E92D34B55F6D43D4C508 /* Pods-otiumUITests-acknowledgements.markdown */,
+				DE010A217C3D8CC899CA4076419E5ED1 /* Pods-otiumUITests-acknowledgements.plist */,
+				B159C01D2885785A35600FFAB4BF73BD /* Pods-otiumUITests-dummy.m */,
+				404EDFE251B3F6B1F0BAF22034C5774B /* Pods-otiumUITests-frameworks.sh */,
+				F42F3E2D1BCA6F67502B338E11CAE074 /* Pods-otiumUITests-resources.sh */,
+				877CE8515AE451C2DB48B9864E3F61F9 /* Pods-otiumUITests-umbrella.h */,
+				F5A55C1B2F8DEC453FA620E9CB9FD9F0 /* Pods-otiumUITests.debug.xcconfig */,
+				532435EEC1EFB96F2EFEA2B506E7469A /* Pods-otiumUITests.release.xcconfig */,
+			);
+			name = "Pods-otiumUITests";
+			path = "Target Support Files/Pods-otiumUITests";
+			sourceTree = "<group>";
+		};
+		721F7BCC9758A0FEF26C7DC374AD374A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CE3E2ABF45A0A81FBAFFFFF9DC42518 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				2D7FD5713B3AA1AEE9965D9F009EF0D5 /* Pods */,
+				584F46601B6EFFB6913B25BADA7BB7F9 /* Products */,
+				D91844DB0E788F2CEBFC28471DF2672B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		86DC7015C631414E94CEACAE721C1193 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				7ABAF753D6B7FFCE56B976EF22B0B783 /* FIRInstanceID.h */,
+				5EF9CA8D7A4A335B4FC47A5F9B9BC382 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		902071372AA4BE0E3D6CD9979094EE08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECF6DDEEBFF93719482743C0DB47111A /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D8FDA5573C11882721EE7818027DDE5 /* Pods-otium */ = {
+			isa = PBXGroup;
+			children = (
+				B40F6BC56BD2EC40C668400DBFB8C267 /* Info.plist */,
+				A56D8A37A2BC4D38BF28196E1699E864 /* Pods-otium.modulemap */,
+				174F50C9C72E19056CD73F1544BE679F /* Pods-otium-acknowledgements.markdown */,
+				3655E3517AB6B834FF5E982C6908D51F /* Pods-otium-acknowledgements.plist */,
+				6340EA01013392A97C710D35D00EFE6D /* Pods-otium-dummy.m */,
+				16E587A9CEC501F758A113E0AFAD50A2 /* Pods-otium-frameworks.sh */,
+				23CF00104495F8C8CD5E4917D2C53651 /* Pods-otium-resources.sh */,
+				C6E5393A9987EF27B6A1E5A03CC1779C /* Pods-otium-umbrella.h */,
+				D2F5CB3F50940FAFDB3A118AFD7AA4F0 /* Pods-otium.debug.xcconfig */,
+				9CD54C3DCBB619731B9A3B7A207A95A7 /* Pods-otium.release.xcconfig */,
+			);
+			name = "Pods-otium";
+			path = "Target Support Files/Pods-otium";
+			sourceTree = "<group>";
+		};
+		A901FBD2CCDBF0A53DAD85534C18A77E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CB7A223B378377E48BD72B68D3AD42A /* TwitterKitResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AA7858F22BCDF99837775CA57258E733 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E78F6039909914A81D901604269B83A /* TwitterCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD56E407A1413505421BC36A1C961CFA /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				3054C946CACA99B2495E2D098FA9E9AB /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		C58F61299CE8D956C60D3FBAE7249EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA66E18876D92F6542AC9B866C618C76 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEE7FC72A298D96B76C262BC01C7C59C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BF333C1465CCD82D557BF56E5C28D68 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2FF22F162905C95C4C67185984A981C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				505684E40094CEBD361EE8FF029C68B4 /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		D8D8221C652DC99D8167AF3FD38A2094 /* TwitterKit */ = {
+			isa = PBXGroup;
+			children = (
+				3FE830060370BA52369C29CC1C892FAC /* Frameworks */,
+				A901FBD2CCDBF0A53DAD85534C18A77E /* Resources */,
+			);
+			path = TwitterKit;
+			sourceTree = "<group>";
+		};
+		D91844DB0E788F2CEBFC28471DF2672B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D8FDA5573C11882721EE7818027DDE5 /* Pods-otium */,
+				0A01AE0EC3B63C38D772643DC03CA2AB /* Pods-otiumTests */,
+				665EBCDF517FC8EBABD7A8D1DA2122CD /* Pods-otiumUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DC1E9178C1E8D129DC8AD76064BF6C03 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				C58F61299CE8D956C60D3FBAE7249EB3 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		E642022AD1B5C57CFD6D90A60A5402C6 /* Eureka */ = {
+			isa = PBXGroup;
+			children = (
+				41C2D945280D7F5B79F266E40828D5B9 /* Cells.swift */,
+				8C07806B219E7A9D21A6DDBB39B23A57 /* Controllers.swift */,
+				A8F0B6FE524522CD817C70A402A433C5 /* Core.swift */,
+				BCFF661D12BD55BB6F4AC3EA03AC619D /* Helpers.swift */,
+				9B1125C7CB560E19BC79D6313534D024 /* Rows.swift */,
+				E8D13C6E2389013C20521011601D6DBB /* Support Files */,
+			);
+			path = Eureka;
+			sourceTree = "<group>";
+		};
+		E8D13C6E2389013C20521011601D6DBB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A54BC1DB1F55DFC58D190A9C987247C /* Eureka.modulemap */,
+				52F986DB8D4EA675DA94A28D9F7B77F9 /* Eureka.xcconfig */,
+				E99BCC53E7ECD471F1E6F0FBB353C9CF /* Eureka-dummy.m */,
+				5CEA05D765247936AF34B76491707F98 /* Eureka-prefix.pch */,
+				FD2B6BA8A8FD4B34E5830803E9DEC771 /* Eureka-umbrella.h */,
+				685FE27DA1EBFD29F7ECE91ABBF2FC63 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Eureka";
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		289C21F5EE16DCA46F57BC722772429E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21B13C6F8CCFB112DF9329416FB5A6E3 /* Pods-otiumTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A580F5A093C3FFB0BF9EF25A1997D7F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DACE99921668007FA280EE7F6890CF9 /* Pods-otium-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA218788F353BDC541978D137295281A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52D5180B8080C290DB1BE94C2B97172 /* Eureka-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F646305A79A9574AA223E338EF60A78B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3C8A59CE20DB259E912AAF6787B6B4 /* Pods-otiumUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2DB34E0B4351A5FE909D384B07211851 /* Pods-otiumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194795CD191633BA47EF40FB4A97A95F /* Build configuration list for PBXNativeTarget "Pods-otiumTests" */;
+			buildPhases = (
+				CF8AC7DB6708E1D002B872BA7F1D5551 /* Sources */,
+				1427E14F8B17CB74380D9E53F264DDAF /* Frameworks */,
+				289C21F5EE16DCA46F57BC722772429E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-otiumTests";
+			productName = "Pods-otiumTests";
+			productReference = 62A4C16082A39E69779E65157C0034BC /* Pods_otiumTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		31EF08F3444DCD2B169D92269C5BCD3D /* Eureka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE81CBA7FE9E61766B15466DE5A60C88 /* Build configuration list for PBXNativeTarget "Eureka" */;
+			buildPhases = (
+				A06E40ECE695337D407598D813197C72 /* Sources */,
+				BD02C174EF4E9DFDD57459A0C1F42C14 /* Frameworks */,
+				AA218788F353BDC541978D137295281A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eureka;
+			productName = Eureka;
+			productReference = B5EB272AEBFEAE55AA3A64085F329DC3 /* Eureka.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE32E7BD8AB4988FB1F8AA0C9B9DFBA8 /* Pods-otium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA98183A866A3494170C3E7FF92FB08C /* Build configuration list for PBXNativeTarget "Pods-otium" */;
+			buildPhases = (
+				2A895DFEDB8FC01CA61E9748B325F2B7 /* Sources */,
+				8478523DD303C55B69F2B09E83AFB8BA /* Frameworks */,
+				A580F5A093C3FFB0BF9EF25A1997D7F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				296940AF30798681315857AA0FB59393 /* PBXTargetDependency */,
+			);
+			name = "Pods-otium";
+			productName = "Pods-otium";
+			productReference = BC8526CD4F0548C4FCD4B2B038A326E5 /* Pods_otium.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CF4EA3C3860B9A52E6CE7B0BB8508B11 /* Pods-otiumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03FB49DB4C426AD3FD813E95C1B59705 /* Build configuration list for PBXNativeTarget "Pods-otiumUITests" */;
+			buildPhases = (
+				886EA3A7BE91E808088C8C7A8A5F89FE /* Sources */,
+				C62AE615DAD39A780CD43AFE4B9CC304 /* Frameworks */,
+				F646305A79A9574AA223E338EF60A78B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-otiumUITests";
+			productName = "Pods-otiumUITests";
+			productReference = 5BF3E62FD314E216B1E2EC78551D1738 /* Pods_otiumUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 584F46601B6EFFB6913B25BADA7BB7F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31EF08F3444DCD2B169D92269C5BCD3D /* Eureka */,
+				BE32E7BD8AB4988FB1F8AA0C9B9DFBA8 /* Pods-otium */,
+				2DB34E0B4351A5FE909D384B07211851 /* Pods-otiumTests */,
+				CF4EA3C3860B9A52E6CE7B0BB8508B11 /* Pods-otiumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A895DFEDB8FC01CA61E9748B325F2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36CAC4A3C94D36C0B424C26791EA98B /* Pods-otium-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		886EA3A7BE91E808088C8C7A8A5F89FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55EB3902AFF61D34ED21E161AB09E98 /* Pods-otiumUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A06E40ECE695337D407598D813197C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC8D349E1F05E10C3FBEB82314971FE /* Cells.swift in Sources */,
+				32BC28F2D8F762BB77955237D0B1733A /* Controllers.swift in Sources */,
+				F4549889D2DD51FD242EF19E8DE29A7A /* Core.swift in Sources */,
+				9F55540302E9D0F8DBE8C934DCF64838 /* Eureka-dummy.m in Sources */,
+				376DCCF04020C1BF909E1C9434160EC9 /* Helpers.swift in Sources */,
+				94026EE895026B940FB818A7E6538B50 /* Rows.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8AC7DB6708E1D002B872BA7F1D5551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E82E9F2990BBF4AC7BD2CE261A6811 /* Pods-otiumTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		296940AF30798681315857AA0FB59393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			target = 31EF08F3444DCD2B169D92269C5BCD3D /* Eureka */;
+			targetProxy = 0921977D93A802EE02A7806D2EBF6EC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		15B753971A8D3F723E9A9BBA835EA432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532435EEC1EFB96F2EFEA2B506E7469A /* Pods-otiumUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otiumUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otiumUITests/Pods-otiumUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otiumUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2BB386E320BC35C6B8027D29D9CBEE00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C305CE11DB8F1ACCA767982F895C622 /* Pods-otiumTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otiumTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otiumTests/Pods-otiumTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otiumTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4F6CCEDD822E21798D7782E1F27BC3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F5CB3F50940FAFDB3A118AFD7AA4F0 /* Pods-otium.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otium/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otium/Pods-otium.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		54E3A077B50E60F2EB7DCCC437EC6BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F986DB8D4EA675DA94A28D9F7B77F9 /* Eureka.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eureka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8E754BFDB0440B217488CDD52CB1FEA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5A55C1B2F8DEC453FA620E9CB9FD9F0 /* Pods-otiumUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otiumUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otiumUITests/Pods-otiumUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otiumUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98ED92EFB6AE696F95AFD5536BC29EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F986DB8D4EA675DA94A28D9F7B77F9 /* Eureka.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eureka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC375972B888FA346A0B229A4B00B84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD54C3DCBB619731B9A3B7A207A95A7 /* Pods-otium.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otium/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otium/Pods-otium.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3656B46BC480A848D1EA318923F0F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 778FB2CD76C3FC1580028544196B7A09 /* Pods-otiumTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otiumTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otiumTests/Pods-otiumTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otiumTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03FB49DB4C426AD3FD813E95C1B59705 /* Build configuration list for PBXNativeTarget "Pods-otiumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E754BFDB0440B217488CDD52CB1FEA0 /* Debug */,
+				15B753971A8D3F723E9A9BBA835EA432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194795CD191633BA47EF40FB4A97A95F /* Build configuration list for PBXNativeTarget "Pods-otiumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3656B46BC480A848D1EA318923F0F8A /* Debug */,
+				2BB386E320BC35C6B8027D29D9CBEE00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE81CBA7FE9E61766B15466DE5A60C88 /* Build configuration list for PBXNativeTarget "Eureka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54E3A077B50E60F2EB7DCCC437EC6BC4 /* Debug */,
+				98ED92EFB6AE696F95AFD5536BC29EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA98183A866A3494170C3E7FF92FB08C /* Build configuration list for PBXNativeTarget "Pods-otium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F6CCEDD822E21798D7782E1F27BC3E6 /* Debug */,
+				BC375972B888FA346A0B229A4B00B84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

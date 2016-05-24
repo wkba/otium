@@ -51,23 +51,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     
         // ページ数分ボタンを生成する.
         for var i = 0; i < pageSize; i++ {
-            
             // loveLabelを生成する.
             let loveLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 80, 60, 30))
             loveLabel.textColor = UIColor.whiteColor()
             loveLabel.textAlignment = NSTextAlignment.Center
             loveLabel.text = "相性: \(i)"
             loveLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            scrollView.addSubview(loveLabel)
+            //scrollView.addSubview(loveLabel)
             
             // distanceLabelを生成する.
-            let distanceLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 50, 60, 30))
+            var distanceLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 50, 60, 30))
             distanceLabel.textColor = UIColor.whiteColor()
             distanceLabel.textAlignment = NSTextAlignment.Center
             distanceLabel.text = "距離: \(i)"
             distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+            //scrollView.addSubview(distanceLabel)
             
+            
+            // distanceLabelを生成する.
+            distanceLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
+            distanceLabel.textColor = UIColor.whiteColor()
+            distanceLabel.textAlignment = NSTextAlignment.Center
+            distanceLabel.text = "稲村さんがあなたにいいねを押しました。"
+            distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
             scrollView.addSubview(distanceLabel)
+            
+            
         }
         
         // PageControlを作成する.
@@ -81,10 +90,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         pageControl.userInteractionEnabled = false
         
         self.view.addSubview(pageControl)
-        
-        
-        
-        
         
         
         pulse.layer.superlayer?.insertSublayer(pulsator, below: pulse.layer)
