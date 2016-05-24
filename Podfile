@@ -9,6 +9,7 @@ pod 'Eureka', '= 1.2'
 pod 'Fabric'
 pod 'TwitterKit'
 pod 'TwitterCore'
+pod "Pulsator"
 end
 
 target 'otiumTests' do

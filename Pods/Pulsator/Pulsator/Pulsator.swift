@@ -1,25 +1,25 @@
 //
-//  Palse.swift
-//  otium
+//  Pulsator.swift
+//  Pulsator
 //
-//  Created by 若林俊輔 on 2016/04/19.
-//  Copyright © 2016年 p6iwi6q. All rights reserved.
+//  Created by Shuichi Tsutsumi on 4/9/16.
+//  Copyright © 2016 Shuichi Tsutsumi. All rights reserved.
 //
+//  Objective-C version: https://github.com/shu223/PulsingHalo
+
+
 import UIKit
 import QuartzCore.QuartzCore
 
 internal let kPulsatorAnimationKey = "pulsator"
 
-//The replicator layer creates a specified number of copies of its sublayers
 public class Pulsator: CAReplicatorLayer {
-    //Domっぽい
+
     private let pulse = CALayer()
-    //グループとして登録
     private var animationGroup: CAAnimationGroup!
     private var alpha: CGFloat = 0.45
-    
+
     override public var backgroundColor: CGColor? {
-        //プロパティの変更前/後で何か処理を書く事ができます。
         didSet {
             pulse.backgroundColor = backgroundColor
             let oldAlpha = alpha
@@ -39,7 +39,7 @@ public class Pulsator: CAReplicatorLayer {
     }
     
     // MARK: - Public Properties
-    
+
     /// The number of pulse.
     public var numPulse: Int = 1 {
         didSet {
@@ -100,14 +100,14 @@ public class Pulsator: CAReplicatorLayer {
             }
         }
     }
-    
+
     
     // MARK: - Initializer
-    
+
     override public init() {
         super.init()
         
-        setupPulse()
+        setuppulse()
         
         instanceDelay = 1
         repeatCount = MAXFLOAT
@@ -126,7 +126,7 @@ public class Pulsator: CAReplicatorLayer {
     
     // MARK: - Private Methods
     
-    private func setupPulse() {
+    private func setuppulse() {
         pulse.contentsScale = UIScreen.mainScreen().scale
         pulse.opacity = 0
         addSublayer(pulse)
@@ -178,14 +178,14 @@ public class Pulsator: CAReplicatorLayer {
     
     // MARK: - Public Methods
     
-    ///MARK: - Start the animation.
+    /// Start the animation.
     public func start() {
-        setupPulse()
+        setuppulse()
         setupAnimateionGroup()
         pulse.addAnimation(animationGroup, forKey: kPulsatorAnimationKey)
     }
     
-    /// MARK: - Stop the animation.
+    /// Stop the animation.
     public func stop() {
         pulse.removeAllAnimations()
         animationGroup = nil
@@ -203,5 +203,13 @@ public class Pulsator: CAReplicatorLayer {
         if autoRemove {
             removeFromSuperlayer()
         }
+    }
+}
+
+extension UIColor {
+    var components:(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+        return (r,g,b,a)
     }
 }

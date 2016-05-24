@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import Pulsator
+
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
     
@@ -26,6 +28,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     
     private var pageControl: UIPageControl!
     private var scrollView: UIScrollView!
+    private let major = Configuration.Major()
+    private let minor = Configuration.Minor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             distanceLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
             distanceLabel.textColor = UIColor.whiteColor()
             distanceLabel.textAlignment = NSTextAlignment.Center
-            distanceLabel.text = "稲村さんがあなたにいいねを押しました。"
+            distanceLabel.text = "稲村さんがあなたにいいねを押しました。\(major):\(minor)"
             distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
             scrollView.addSubview(distanceLabel)
             
@@ -91,11 +95,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         
         self.view.addSubview(pageControl)
         
-        
+        setBackgroundColor()
         pulse.layer.superlayer?.insertSublayer(pulsator, below: pulse.layer)
         setupInitialValues()
         pulsator.start()
-        setBackgroundColor()
         //animetion()
         
         
@@ -105,11 +108,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         settingBtn.imageView?.contentMode = .ScaleAspectFit
         self.view.addSubview(settingBtn)
         
-        let questionBtn = UIButton()
-        questionBtn.frame = CGRectMake(myBoundSize.width - 20 - 45, 40, 45, 45)
-        questionBtn.setImage(UIImage(named: "question.png"), forState: .Normal)
-        questionBtn.imageView?.contentMode = .ScaleAspectFit
-        self.view.addSubview(questionBtn)
+        let bellBtn = UIButton()
+        bellBtn.frame = CGRectMake(myBoundSize.width - 20 - 45, 40, 45, 45)
+        bellBtn.setImage(UIImage(named: "bell.png"), forState: .Normal)
+        bellBtn.imageView?.contentMode = .ScaleAspectFit
+        bellBtn.alpha = 0.6
+        self.view.addSubview(bellBtn)
 
         
         //MARK: central
@@ -140,7 +144,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             self.view.backgroundColor = self.colors[closestBeacon.minor.integerValue % 3]
             print(closestBeacon.accuracy)
             print(beacons)
-            
+            self.noFriendLabel.text = "友達発見！\(closestBeacon.major) : \(closestBeacon.minor):  \(closestBeacon.accuracy)"
+            pulsator.numPulse = 1
+            pulsator.radius = 240.0
+            pulsator.start()
+
+        }else{
+            self.noFriendLabel.text = "周りに誰もいません。"
         }
     }
 
@@ -207,6 +217,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         if fmod(scrollView.contentOffset.x, scrollView.frame.maxX) == 0 {
             // ページの場所を切り替える.
             pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.maxX)
+        }
+    }
+    
+    func FixPulsaor(accuracy: CLLocationAccuracy){
+        if(accuracy<1){
+            pulsator.numPulse = 6
+            pulsator.radius = 240.0
+            pulsator.repeatCount = 7
+            pulsator.start()
+        }else if(accuracy<5){
+            pulsator.numPulse = 2
+            pulsator.radius = 240.0
+            pulsator.start()
         }
     }
 }

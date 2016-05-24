@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		100EC3822C3A2CE4E808BAE7 /* Pods_otiumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905BBF9547DF674E3FFDC685 /* Pods_otiumUITests.framework */; };
 		1D32722A7CF0D7A533DEA10F /* Pods_otium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FA4CA05AAE4E1696063BE8 /* Pods_otium.framework */; };
-		3D1D53E31CC60D45008EBDEF /* Pulsator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D53E21CC60D45008EBDEF /* Pulsator.swift */; };
 		3D1D53E51CC698D9008EBDEF /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D53E41CC698D9008EBDEF /* gear.png */; };
 		3D1D53EB1CC69B79008EBDEF /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D53EA1CC69B79008EBDEF /* question.png */; };
 		3D28FD411CF37DA700C03F03 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28FD401CF37DA700C03F03 /* TwitterAPI.swift */; };
+		3D28FD431CF42D5600C03F03 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D28FD421CF42D5600C03F03 /* bell.png */; };
 		3D2B18511CF3760000923E3C /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B18501CF3760000923E3C /* FirstVC.swift */; };
 		3DB6F1101CF2F01000D3F0FF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB6F10F1CF2F01000D3F0FF /* CoreBluetooth.framework */; };
 		3DB6F1121CF3674A00D3F0FF /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6F1111CF3674A00D3F0FF /* SetVC.swift */; };
@@ -60,10 +60,10 @@
 		10C503924B8E57849FB8BB82 /* Pods-otiumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otiumUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-otiumUITests/Pods-otiumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		12BE49F14222A8185CB7260A /* Pods-otium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otium.release.xcconfig"; path = "Pods/Target Support Files/Pods-otium/Pods-otium.release.xcconfig"; sourceTree = "<group>"; };
 		31FA4CA05AAE4E1696063BE8 /* Pods_otium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1D53E21CC60D45008EBDEF /* Pulsator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulsator.swift; sourceTree = "<group>"; };
 		3D1D53E41CC698D9008EBDEF /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		3D1D53EA1CC69B79008EBDEF /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
 		3D28FD401CF37DA700C03F03 /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		3D28FD421CF42D5600C03F03 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
 		3D2B18501CF3760000923E3C /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		3DB6F10F1CF2F01000D3F0FF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3DB6F1111CF3674A00D3F0FF /* SetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
@@ -171,7 +171,6 @@
 				3DFB06161CC91FB900D96693 /* Screen.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
 				3DB6F1111CF3674A00D3F0FF /* SetVC.swift */,
-				3D1D53E21CC60D45008EBDEF /* Pulsator.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
 				3D2B18501CF3760000923E3C /* FirstVC.swift */,
 				3D28FD401CF37DA700C03F03 /* TwitterAPI.swift */,
@@ -205,6 +204,7 @@
 		3DFB061D1CC9322500D96693 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				3D28FD421CF42D5600C03F03 /* bell.png */,
 				3DE35E6A1CC9470F006C9765 /* logo.png */,
 				3DE35E681CC9468F006C9765 /* back.png */,
 				3D1D53E41CC698D9008EBDEF /* gear.png */,
@@ -352,6 +352,7 @@
 			files = (
 				3D1D53EB1CC69B79008EBDEF /* question.png in Resources */,
 				3DFB06151CC916F500D96693 /* profile.png in Resources */,
+				3D28FD431CF42D5600C03F03 /* bell.png in Resources */,
 				3DFA12021CC3AA9100A48515 /* LaunchScreen.storyboard in Resources */,
 				3DFA11FF1CC3AA9100A48515 /* Assets.xcassets in Resources */,
 				3DE35E6B1CC9470F006C9765 /* logo.png in Resources */,
@@ -527,7 +528,6 @@
 				3DFB061B1CC9311200D96693 /* connectFirebase.swift in Sources */,
 				3DB6F1121CF3674A00D3F0FF /* SetVC.swift in Sources */,
 				3DFA122C1CC3E89600A48515 /* Configuration.swift in Sources */,
-				3D1D53E31CC60D45008EBDEF /* Pulsator.swift in Sources */,
 				3DFB06221CC93ECF00D96693 /* AccessNSUserDefaults.swift in Sources */,
 				3DFA12281CC3AC5C00A48515 /* Peripheral.swift in Sources */,
 				3DFB06171CC91FB900D96693 /* Screen.swift in Sources */,
@@ -621,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -659,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
