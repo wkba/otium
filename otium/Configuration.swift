@@ -17,6 +17,7 @@ class Configuration
     private static let _identifier = "pj7.link"
     private static let _major = CLBeaconMajorValue(arc4random() % 100)
     private static let _minor = CLBeaconMinorValue(arc4random() % 3)
+
     
     class func UUID() -> String {
         return self._UUID
@@ -32,4 +33,5 @@ class Configuration
     }
     
     private init() {}
+    
 }

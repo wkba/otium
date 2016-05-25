@@ -30,6 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     private var scrollView: UIScrollView!
     private let major = Configuration.Major()
     private let minor = Configuration.Minor()
+    private let connectFirebase = ConnectFirebase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +123,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             locationManager.requestWhenInUseAuthorization()
         }
         locationManager.startRangingBeaconsInRegion(region)
+        
+        
+        
+        
+        
+
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("otium_major")) != nil){
+            //objectsを配列として確定させ、前回の保存内容を格納
+            let otium_major = defaults.objectForKey("otium_major")!
+            print("Major:\(otium_major)")
+        }else{
+            print("error:Major")
+        }
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("otium_minor")) != nil){
+            //objectsを配列として確定させ、前回の保存内容を格納
+            let otium_minor = defaults.objectForKey("otium_minor")!
+            print("Major:\(otium_minor)")
+        }else{
+            print("error:Minor")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
