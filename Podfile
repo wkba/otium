@@ -4,12 +4,13 @@
 use_frameworks!
 
 target 'otium' do
-pod 'Firebase', '>= 2.5.1'
+pod 'Firebase', '= 2.5.1'
 pod 'Eureka', '= 1.2'
 pod 'Fabric'
 pod 'TwitterKit'
 pod 'TwitterCore'
 pod "Pulsator"
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
 target 'otiumTests' do

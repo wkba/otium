@@ -7,118 +7,178 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 012A64FB671031DD27ED266BB41E8218 /* Empty.m */; };
+		15F8A2641EC970B7480AD1EA9BBE7AD0 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D16CEE7B9C495941B59A1F2348FF9E4B /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 8780198F988FCEDA2047E7E4E15DEC79 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = E330B296BC0ECDA5900A0B88892F35FD /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C987AE7DB383B20E4F49E8088AF9287 /* Pulsator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2D6D853D162EA33A13B269241ED77 /* Pulsator.swift */; };
+		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 82558630238DD3172F678E6F53FC17F5 /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C339E094C3C863CF57E66C971C3F1FA7 /* Firebase-dummy.m */; };
+		1E338760CBC33BC6B336387E038D2530 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB760A15FCDA0D7A6A344FD6858DF757 /* CFNetwork.framework */; };
+		1E6DE784A7B938E860AEB5C78446148D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A809251E1CEED79A59D2901CB8B52CAF /* SystemConfiguration.framework */; };
 		21B13C6F8CCFB112DF9329416FB5A6E3 /* Pods-otiumTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D26406B905E8F9104930FCA14C071A37 /* Pods-otiumTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		277280B9E275BECA31670E4539B736C0 /* Pods-otium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6340EA01013392A97C710D35D00EFE6D /* Pods-otium-dummy.m */; };
-		32BC28F2D8F762BB77955237D0B1733A /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25D900DFEA38C636FA1E2FACFA3EA13 /* Controllers.swift */; };
-		32C00AAEEF56F972C2ECCBE14DDE09B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */; };
-		33ED311FF3DB5C41984E6843914638BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		369243DC00210AD0807577694D58AF67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		376DCCF04020C1BF909E1C9434160EC9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D4DCAA243F0FCA896296A743A10C4 /* Helpers.swift */; };
-		3FF7AECF499252EE5F731C45BDDA0F66 /* Pulsator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3F7F0FCE98D60A9B47C143F10BD94 /* Pulsator.swift */; };
-		4CC8D349E1F05E10C3FBEB82314971FE /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C392AD25F71295CA9581212B8335682 /* Cells.swift */; };
-		67EBF3083F5A7E32E4561969AB17F492 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		7A3E501B4F088939AB644ABC0BA128C6 /* Pulsator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8014474E768081691E7D42B8DB7FFC /* Pulsator-dummy.m */; };
-		7C7C6EE32EA33D7065B21C2BF2F34005 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */; };
-		7E25AAD110FBD601680BB0B15DB670A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */; };
-		94026EE895026B940FB818A7E6538B50 /* Rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48655C1FEAD7343BF422991619D68E /* Rows.swift */; };
-		9F55540302E9D0F8DBE8C934DCF64838 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CC74DE4E3DB541D6831E8CF7720A7A /* Eureka-dummy.m */; };
-		ABA0CCB3C7C7BAA1E7A81ECDE5FC1128 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		B43A98AC61155EE7E8152191D5E516E1 /* Pods-otium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E5393A9987EF27B6A1E5A03CC1779C /* Pods-otium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2392D45A4B744C8B46E5F8D7EA9CA2E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F201DE2AC1E9EA4F10847C0518489E9B /* UIKit.framework */; };
+		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C8C3EE62CDBDD37C609899E301372B /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 5401C2720CC26E06CA91BCB7FDEF548F /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32BC28F2D8F762BB77955237D0B1733A /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFFF6FF75FE1C3CAB91BB1195955B37 /* Controllers.swift */; };
+		33ED311FF3DB5C41984E6843914638BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		369243DC00210AD0807577694D58AF67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		376DCCF04020C1BF909E1C9434160EC9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DCD4A97898647937B70C0C2CDA6DB3 /* Helpers.swift */; };
+		4CC8D349E1F05E10C3FBEB82314971FE /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EE7FF2EB6ACF6A84E75C21AACA13A /* Cells.swift */; };
+		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B89ED7EB76F413E0B870864E558B90 /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52B5EF41A0C4DA71CBD032362B324BF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		547D3BC06144972649EE081AC10B3F50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 079B9CA9196C4A09284FC954A22F2871 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62FFF3BC619C1302B3506CA7158DBE56 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD0A5AC42660476FE5254A689253F0 /* SwiftyJSON.swift */; };
+		656749E81FF9AB70BFE4F3012219ED63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55650C8BB58DD07104A320FBC452557 /* QuartzCore.framework */; };
+		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F97C398E552CB2A06524292B461DAA /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67EBF3083F5A7E32E4561969AB17F492 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		67F62101693CDEF9F1312BB735B51EA3 /* Pods-otium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6340EA01013392A97C710D35D00EFE6D /* Pods-otium-dummy.m */; };
+		74671B073B191FA52865273FCB093B8B /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C3AF9ACD258D92F0D36856BE77CCC /* SwiftyJSON-dummy.m */; };
+		7E25AAD110FBD601680BB0B15DB670A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F201DE2AC1E9EA4F10847C0518489E9B /* UIKit.framework */; };
+		7FE1BBAF101DF8F003D7C1AD132EF88A /* Pulsator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9275BB9896432A802C3046FE85DE05E0 /* Pulsator-dummy.m */; };
+		93A6C696C33E7EBA3E45DE3BEBBDBCBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		94026EE895026B940FB818A7E6538B50 /* Rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478E4325FA630F6AF002F4E2EB54EC9 /* Rows.swift */; };
+		9F55540302E9D0F8DBE8C934DCF64838 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B922CA44FEF798D53ED5D42BB9C28894 /* Eureka-dummy.m */; };
+		A8A6AAF22475EF5702499CA710AFB6D3 /* Pulsator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D017DB40EA39D644CE941549DCEE331A /* Pulsator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFF6EC6514DD0003278B7A01E9AE77EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B767BE47760825F465FEA8473646DFAA /* Security.framework */; };
 		B55EB3902AFF61D34ED21E161AB09E98 /* Pods-otiumUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B159C01D2885785A35600FFAB4BF73BD /* Pods-otiumUITests-dummy.m */; };
-		D668394649DD98324BC8777A81D6AD53 /* Pulsator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0913EF682285B3F0CABE869FC28F3260 /* Pulsator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = A23CA280DDC51355E682BCF0D029FDBF /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8E82E9F2990BBF4AC7BD2CE261A6811 /* Pods-otiumTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF5A4F9F1478545E22BB1BEFA2B72A /* Pods-otiumTests-dummy.m */; };
 		DA3C8A59CE20DB259E912AAF6787B6B4 /* Pods-otiumUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 877CE8515AE451C2DB48B9864E3F61F9 /* Pods-otiumUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E52D5180B8080C290DB1BE94C2B97172 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D3FC064613A8C1D3C89E94A0A7AE8D1 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4549889D2DD51FD242EF19E8DE29A7A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D5BCCA92E6435A0B94301A327B88E5 /* Core.swift */; };
-		FB793D1D212CF08782F1272B53A906AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
+		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3FBC1420EE554AC1DD60B40E229C3E /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E482F0209164554AA6D182FE97FEEC66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */; };
+		E52D5180B8080C290DB1BE94C2B97172 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D020A50991DCA4ED299B264DD15E64B /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C9F5F7BC7E9BF556FB15A3AC1A8D53 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 66DDE4681D18503B6BBF2DA2532CCB77 /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F00D2EFAED8B912B44E045D75E87FB5C /* Pods-otium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E5393A9987EF27B6A1E5A03CC1779C /* Pods-otium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4549889D2DD51FD242EF19E8DE29A7A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389A337C491C1543CE5AAE9739C8831 /* Core.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		63E2C9574F27D0552AC02C876A04776D /* PBXContainerItemProxy */ = {
+		247E85F9BDE6F7D30D724EB3A3612245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7760BCCF0849A718F031B5C0AD628410;
+			remoteInfo = Pulsator;
+		};
+		77122023A958DAA3ED7C3E18AA2FCEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9074C60ABF72F9715863C8D4CC9A8971;
+			remoteInfo = SwiftyJSON;
+		};
+		C1C5E002EB957B0B486E7A78D3924C31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+		E4B4E885C454719BD0C8651842BB8B3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 31EF08F3444DCD2B169D92269C5BCD3D;
 			remoteInfo = Eureka;
 		};
-		B81D41C3A1EA50AECCC5F179449F457D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B4C02E29F7663237322CE494697A592E;
-			remoteInfo = Pulsator;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0913EF682285B3F0CABE869FC28F3260 /* Pulsator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulsator-umbrella.h"; sourceTree = "<group>"; };
-		091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		00AB8571B13825BD7200B32A6D7F85E2 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		012A64FB671031DD27ED266BB41E8218 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		02BF67AEC6A10CF32A207966E8955179 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		079B9CA9196C4A09284FC954A22F2871 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		085479CA73AD21453BF7FBC76EDC681A /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		0D020A50991DCA4ED299B264DD15E64B /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
 		0E2BDE52CE8C042477B87C1705E55AE3 /* Pods-otiumTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-otiumTests.modulemap"; sourceTree = "<group>"; };
-		15E3F7F0FCE98D60A9B47C143F10BD94 /* Pulsator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pulsator.swift; path = Pulsator/Pulsator.swift; sourceTree = "<group>"; };
+		10A700734E3860A2A13904674C1CEB76 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		11619744C6E9C3EEB6F010CE5CC0E550 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1492C645F4FC51B9990F8E77A11601DD /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
+		160CE29DA688463D0C75B70CA96BB197 /* Pulsator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulsator.xcconfig; sourceTree = "<group>"; };
+		1626F7AFD028A18575E8E78177117564 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		16E587A9CEC501F758A113E0AFAD50A2 /* Pods-otium-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otium-frameworks.sh"; sourceTree = "<group>"; };
 		174F50C9C72E19056CD73F1544BE679F /* Pods-otium-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-otium-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1BAD7B6387F3C903E6E775897D3A2965 /* Pods-otiumTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumTests-frameworks.sh"; sourceTree = "<group>"; };
-		23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		1D87281991CAC18BF4403CB4AB8C3B3C /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = iOS/TwitterCore.framework; sourceTree = "<group>"; };
+		23B89ED7EB76F413E0B870864E558B90 /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
 		23CF00104495F8C8CD5E4917D2C53651 /* Pods-otium-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otium-resources.sh"; sourceTree = "<group>"; };
-		2B48655C1FEAD7343BF422991619D68E /* Rows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rows.swift; path = Source/Rows.swift; sourceTree = "<group>"; };
-		2E8C14F8AE84B3894392BBCA8EA709C6 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = iOS/TwitterCore.framework; sourceTree = "<group>"; };
-		33033F7796F1F6EF442AFE08EE036399 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
+		2F5259A3792A43C18933F58A4838A395 /* Pods_otium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3291C8DD3A1B256C72654253368CB836 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3655E3517AB6B834FF5E982C6908D51F /* Pods-otium-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-otium-acknowledgements.plist"; sourceTree = "<group>"; };
 		3697E7646331E92D34B55F6D43D4C508 /* Pods-otiumUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-otiumUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3F7D4DCAA243F0FCA896296A743A10C4 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Helpers.swift; sourceTree = "<group>"; };
+		391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3C3FBC1420EE554AC1DD60B40E229C3E /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		3E6ADD6EE7BBFF0E91B8C58FFE3F1DD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		404EDFE251B3F6B1F0BAF22034C5774B /* Pods-otiumUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumUITests-frameworks.sh"; sourceTree = "<group>"; };
-		4050628541A2C93615BEC7F60430804B /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		41D65C75038911A029FBAADF3D21F53A /* Pods-otiumTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-otiumTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4DCC7464EBEE1750944B027E1F45E3EF /* Pods_otiumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otiumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5100B6951B0075B79F87CDEB6A22273C /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		42E2D6D853D162EA33A13B269241ED77 /* Pulsator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pulsator.swift; path = Pulsator/Pulsator.swift; sourceTree = "<group>"; };
+		46DCD4A97898647937B70C0C2CDA6DB3 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Helpers.swift; sourceTree = "<group>"; };
 		532435EEC1EFB96F2EFEA2B506E7469A /* Pods-otiumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumUITests.release.xcconfig"; sourceTree = "<group>"; };
-		59F0A54585B91BB5A9DB6FD3DE888193 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		5401C2720CC26E06CA91BCB7FDEF548F /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		5478E4325FA630F6AF002F4E2EB54EC9 /* Rows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rows.swift; path = Source/Rows.swift; sourceTree = "<group>"; };
 		6340EA01013392A97C710D35D00EFE6D /* Pods-otium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-otium-dummy.m"; sourceTree = "<group>"; };
-		6399F5940F8E1D47591B61D9C347FA11 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Eureka.modulemap; sourceTree = "<group>"; };
-		6D3FC064613A8C1D3C89E94A0A7AE8D1 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
+		6389A337C491C1543CE5AAE9739C8831 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core.swift; sourceTree = "<group>"; };
+		66DDE4681D18503B6BBF2DA2532CCB77 /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		67BEB5181C72450384CD707C92DFB8B0 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
+		6B8C3AF9ACD258D92F0D36856BE77CCC /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		6BBE728DE3279BACFCD3803C9CEF6956 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		758E46CDCF235E2DC4E08E62BE92A729 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		76DD0A5AC42660476FE5254A689253F0 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		778FB2CD76C3FC1580028544196B7A09 /* Pods-otiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumTests.debug.xcconfig"; sourceTree = "<group>"; };
-		77A7FBD4799389BA08D481EF158A007C /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C392AD25F71295CA9581212B8335682 /* Cells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cells.swift; path = Source/Cells.swift; sourceTree = "<group>"; };
+		7D30B55AB2E004FF1B4EAA144A8528D3 /* Pods_otiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82558630238DD3172F678E6F53FC17F5 /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
 		839028A5B30A9EF48D3EDE618F5A062F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8517621B7F8A85C49DEEDE8815BC21E6 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		877CE8515AE451C2DB48B9864E3F61F9 /* Pods-otiumUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-otiumUITests-umbrella.h"; sourceTree = "<group>"; };
-		883E9552AF0A6BDF9B2E242FEF623DAA /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		8780198F988FCEDA2047E7E4E15DEC79 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
 		8AF1D3321427F36512AD9BC41E4D2010 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C305CE11DB8F1ACCA767982F895C622 /* Pods-otiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumTests.release.xcconfig"; sourceTree = "<group>"; };
-		8C32CA74C671D6236A7AE9066130B8B1 /* Pulsator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulsator-prefix.pch"; sourceTree = "<group>"; };
-		8DF42409480B17F8B1C14F847207622C /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		919F3AB454C30DC4027A5E29351294E0 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		8F5BCF73B41CEB05D1C021A9E5E2D414 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		91E652F36F448EEB95EFFAF93750468B /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		9275BB9896432A802C3046FE85DE05E0 /* Pulsator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulsator-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96886DB3DA18F5C71726B4F2A5388CA6 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		9A26D8073C4D022CEA740C29912DA7B2 /* Pulsator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulsator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A53D73B212319F8DF526038F6D5DB7 /* Pods_otiumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otiumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C8C3EE62CDBDD37C609899E301372B /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
 		9CD54C3DCBB619731B9A3B7A207A95A7 /* Pods-otium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otium.release.xcconfig"; sourceTree = "<group>"; };
-		A4CC74DE4E3DB541D6831E8CF7720A7A /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
+		9E7077F6B6CAAD00F61B56A87755F7E3 /* Pulsator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pulsator.modulemap; sourceTree = "<group>"; };
+		A1BE729939438DA2A045E68B038A8777 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		A23CA280DDC51355E682BCF0D029FDBF /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
 		A56D8A37A2BC4D38BF28196E1699E864 /* Pods-otium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-otium.modulemap"; sourceTree = "<group>"; };
-		A6245472B068627BE5D9D5DFD6DF5AE9 /* Pulsator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulsator.xcconfig; sourceTree = "<group>"; };
-		A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A6C9F5F7BC7E9BF556FB15A3AC1A8D53 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		A809251E1CEED79A59D2901CB8B52CAF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		B12322FE24E68395E0C0356C146F7547 /* Pods-otiumTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-otiumTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B159C01D2885785A35600FFAB4BF73BD /* Pods-otiumUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-otiumUITests-dummy.m"; sourceTree = "<group>"; };
-		B1BADA3562A3917A0098B2C64D6AE334 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B27CEAD91E2F6A44D9D279B931D77A40 /* Pods_otium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40F6BC56BD2EC40C668400DBFB8C267 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC8014474E768081691E7D42B8DB7FFC /* Pulsator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulsator-dummy.m"; sourceTree = "<group>"; };
-		BE8CEC06833C4D9AEBC7E6EAA94799AC /* Pods_otiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C62D4E0434E88898DB51DAD975EBF40D /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		B767BE47760825F465FEA8473646DFAA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		B922CA44FEF798D53ED5D42BB9C28894 /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
+		BE984B50855A9A2DA501A9255898B8F5 /* Pulsator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulsator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C84AE4BB2A0E1459868E3A6568A064 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		C339E094C3C863CF57E66C971C3F1FA7 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		C42E8742BE7404CFB0B88EB4BE43C195 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C69113F888DD2D2641AD916D6D163FB9 /* Pods-otiumTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumTests-resources.sh"; sourceTree = "<group>"; };
 		C6E5393A9987EF27B6A1E5A03CC1779C /* Pods-otium-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-otium-umbrella.h"; sourceTree = "<group>"; };
+		CA5EE7FF2EB6ACF6A84E75C21AACA13A /* Cells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cells.swift; path = Source/Cells.swift; sourceTree = "<group>"; };
+		D017DB40EA39D644CE941549DCEE331A /* Pulsator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulsator-umbrella.h"; sourceTree = "<group>"; };
+		D16CEE7B9C495941B59A1F2348FF9E4B /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		D26406B905E8F9104930FCA14C071A37 /* Pods-otiumTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-otiumTests-umbrella.h"; sourceTree = "<group>"; };
 		D2F5CB3F50940FAFDB3A118AFD7AA4F0 /* Pods-otium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otium.debug.xcconfig"; sourceTree = "<group>"; };
 		D43A60564562196133220B18BD97BF61 /* Pods-otiumUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-otiumUITests.modulemap"; sourceTree = "<group>"; };
-		D6D5BCCA92E6435A0B94301A327B88E5 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core.swift; sourceTree = "<group>"; };
+		D55650C8BB58DD07104A320FBC452557 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		DCEF5A4F9F1478545E22BB1BEFA2B72A /* Pods-otiumTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-otiumTests-dummy.m"; sourceTree = "<group>"; };
 		DE010A217C3D8CC899CA4076419E5ED1 /* Pods-otiumUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-otiumUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E25D900DFEA38C636FA1E2FACFA3EA13 /* Controllers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = Source/Controllers.swift; sourceTree = "<group>"; };
-		E4D59859B3E8D55ED26C9B6C637E1EB0 /* Pulsator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pulsator.modulemap; sourceTree = "<group>"; };
-		E6B557C81048C9986DF20BD40E73DD22 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6D9294BEADA38F6BB3376AF525D5AC0 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		E330B296BC0ECDA5900A0B88892F35FD /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		E3F97C398E552CB2A06524292B461DAA /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		EB760A15FCDA0D7A6A344FD6858DF757 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		F201DE2AC1E9EA4F10847C0518489E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F42F3E2D1BCA6F67502B338E11CAE074 /* Pods-otiumUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-otiumUITests-resources.sh"; sourceTree = "<group>"; };
+		F4FB3D78E7314D0E2C89FB12EB54E74F /* Pulsator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulsator-prefix.pch"; sourceTree = "<group>"; };
 		F5A55C1B2F8DEC453FA620E9CB9FD9F0 /* Pods-otiumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-otiumUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F975FC5C315B26AEC4B2F67136DEDD90 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
-		FDEFF32CA55376BD317FF49F495A83AC /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
+		F6B4B96D35BA0A15DF3DA80F5DB1FAD8 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Eureka.modulemap; sourceTree = "<group>"; };
+		FBFFF6FF75FE1C3CAB91BB1195955B37 /* Controllers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = Source/Controllers.swift; sourceTree = "<group>"; };
+		FEC37685216EBA5DA7719B5EB865AA0D /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,21 +190,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B13E0FA6AA14364484DDA6762002A9E /* Frameworks */ = {
+		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB793D1D212CF08782F1272B53A906AF /* Foundation.framework in Frameworks */,
-				7C7C6EE32EA33D7065B21C2BF2F34005 /* QuartzCore.framework in Frameworks */,
-				32C00AAEEF56F972C2ECCBE14DDE09B8 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98E0FAF81B35AAB70B4FDEFF32C41210 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABA0CCB3C7C7BAA1E7A81ECDE5FC1128 /* Foundation.framework in Frameworks */,
+				1E338760CBC33BC6B336387E038D2530 /* CFNetwork.framework in Frameworks */,
+				52B5EF41A0C4DA71CBD032362B324BF7 /* Foundation.framework in Frameworks */,
+				AFF6EC6514DD0003278B7A01E9AE77EA /* Security.framework in Frameworks */,
+				1E6DE784A7B938E860AEB5C78446148D /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +218,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6CB202DC3122E0E362D811CC161805B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547D3BC06144972649EE081AC10B3F50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53623687C1C8EA7ED98C25AD6F33060 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93A6C696C33E7EBA3E45DE3BEBBDBCBA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52F66B3C2C1A8F96A7F85E693A9D4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E482F0209164554AA6D182FE97FEEC66 /* Foundation.framework in Frameworks */,
+				656749E81FF9AB70BFE4F3012219ED63 /* QuartzCore.framework in Frameworks */,
+				2392D45A4B744C8B46E5F8D7EA9CA2E0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0241990E676B92E045B988DE6CA222F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BCF73B41CEB05D1C021A9E5E2D414 /* TwitterKitResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0457C11499B6477317412BAD5A0FEBDA /* Eureka */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EE7FF2EB6ACF6A84E75C21AACA13A /* Cells.swift */,
+				FBFFF6FF75FE1C3CAB91BB1195955B37 /* Controllers.swift */,
+				6389A337C491C1543CE5AAE9739C8831 /* Core.swift */,
+				46DCD4A97898647937B70C0C2CDA6DB3 /* Helpers.swift */,
+				5478E4325FA630F6AF002F4E2EB54EC9 /* Rows.swift */,
+				8331947B42F03CE47EA0B6B7862FBD4C /* Support Files */,
+			);
+			path = Eureka;
+			sourceTree = "<group>";
+		};
 		0A01AE0EC3B63C38D772643DC03CA2AB /* Pods-otiumTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,107 +286,94 @@
 			path = "Target Support Files/Pods-otiumTests";
 			sourceTree = "<group>";
 		};
-		0B31579E1CEAEE398643B69893E4884C /* TwitterKit */ = {
+		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0D6E29E30D94FD4CB08771FF6CA940D9 /* Frameworks */,
-				50D1A7485F8D767A8D623ED261187080 /* Resources */,
-			);
-			path = TwitterKit;
-			sourceTree = "<group>";
-		};
-		0D6E29E30D94FD4CB08771FF6CA940D9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C62D4E0434E88898DB51DAD975EBF40D /* TwitterKit.framework */,
+				BA98A8BE3EAD4A96AE869A6C0EA84300 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		117FA7EA72713A0F2587ADBFC87F31A4 /* Frameworks */ = {
+		2CA37908E66600F7E5A764C0D6CC7AAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5100B6951B0075B79F87CDEB6A22273C /* GoogleSymbolUtilities.framework */,
+				758E46CDCF235E2DC4E08E62BE92A729 /* libFirebaseStatic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		31E3ED477F226F1FAD6D52F26F151D6E /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */,
+				76DD0A5AC42660476FE5254A689253F0 /* SwiftyJSON.swift */,
+				46AEEDB71B8FD78CCF6702E37316A3D6 /* Support Files */,
 			);
-			name = Frameworks;
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		165E49161073B26B9FDD7FD8DE03B4DF /* Firebase */ = {
+		3339BDCE07F04B7B4A909D272A11E68C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B19F55612A6DE8ED62AB397C45B7694 /* Analytics */,
+				8517621B7F8A85C49DEEDE8815BC21E6 /* Eureka.framework */,
+				FEC37685216EBA5DA7719B5EB865AA0D /* Firebase.framework */,
+				2F5259A3792A43C18933F58A4838A395 /* Pods_otium.framework */,
+				7D30B55AB2E004FF1B4EAA144A8528D3 /* Pods_otiumTests.framework */,
+				94A53D73B212319F8DF526038F6D5DB7 /* Pods_otiumUITests.framework */,
+				BE984B50855A9A2DA501A9255898B8F5 /* Pulsator.framework */,
+				00AB8571B13825BD7200B32A6D7F85E2 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42C461FE19B9237D12A51183F515C5F2 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				012A64FB671031DD27ED266BB41E8218 /* Empty.m */,
+				A23CA280DDC51355E682BCF0D029FDBF /* FAuthData.h */,
+				82558630238DD3172F678E6F53FC17F5 /* FAuthType.h */,
+				A6C9F5F7BC7E9BF556FB15A3AC1A8D53 /* FConfig.h */,
+				66DDE4681D18503B6BBF2DA2532CCB77 /* FDataSnapshot.h */,
+				95C8C3EE62CDBDD37C609899E301372B /* FEventType.h */,
+				E330B296BC0ECDA5900A0B88892F35FD /* Firebase.h */,
+				5401C2720CC26E06CA91BCB7FDEF548F /* FirebaseApp.h */,
+				E3F97C398E552CB2A06524292B461DAA /* FirebaseServerValue.h */,
+				3C3FBC1420EE554AC1DD60B40E229C3E /* FMutableData.h */,
+				23B89ED7EB76F413E0B870864E558B90 /* FQuery.h */,
+				8780198F988FCEDA2047E7E4E15DEC79 /* FTransactionResult.h */,
+				2CA37908E66600F7E5A764C0D6CC7AAF /* Frameworks */,
+				F7DF7EA4257D30A64650F2AD45E6C857 /* Support Files */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		1D4A669B28941FDDFFE9AF2D53E2B515 /* Fabric */ = {
+		46AEEDB71B8FD78CCF6702E37316A3D6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				76C5CDC1CD1C49F50884BAB6A7D166A8 /* Frameworks */,
+				3291C8DD3A1B256C72654253368CB836 /* Info.plist */,
+				085479CA73AD21453BF7FBC76EDC681A /* SwiftyJSON.modulemap */,
+				1626F7AFD028A18575E8E78177117564 /* SwiftyJSON.xcconfig */,
+				6B8C3AF9ACD258D92F0D36856BE77CCC /* SwiftyJSON-dummy.m */,
+				02BF67AEC6A10CF32A207966E8955179 /* SwiftyJSON-prefix.pch */,
+				D16CEE7B9C495941B59A1F2348FF9E4B /* SwiftyJSON-umbrella.h */,
 			);
-			path = Fabric;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		2B19F55612A6DE8ED62AB397C45B7694 /* Analytics */ = {
+		5B48F88A77E8B9AA64773B2DF59AD057 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				919F3AB454C30DC4027A5E29351294E0 /* Firebase.h */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		50D1A7485F8D767A8D623ED261187080 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				59F0A54585B91BB5A9DB6FD3DE888193 /* TwitterKitResources.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		569F19D63D630FD8D78FF8A6CF15D653 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				96886DB3DA18F5C71726B4F2A5388CA6 /* GoogleUtilities.framework */,
+				6BBE728DE3279BACFCD3803C9CEF6956 /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E82FD61C1C0ABE019F5062933283D8B /* FirebaseInstanceID */ = {
+		64555706D0AF8370CA8805DE1D77821F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				883E9552AF0A6BDF9B2E242FEF623DAA /* FIRInstanceID.h */,
-				DBD1EBF724F0A6D251E7BF09003E2298 /* Frameworks */,
+				C0C84AE4BB2A0E1459868E3A6568A064 /* TwitterKit.framework */,
 			);
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		5ED6EAE92F09EC299387B5233EAB4842 /* FirebaseAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				9DDC15E14680EBBE704E3AE3051DCB01 /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		6087304DDFD8E71F20F6A3B6E99E3829 /* Eureka */ = {
-			isa = PBXGroup;
-			children = (
-				7C392AD25F71295CA9581212B8335682 /* Cells.swift */,
-				E25D900DFEA38C636FA1E2FACFA3EA13 /* Controllers.swift */,
-				D6D5BCCA92E6435A0B94301A327B88E5 /* Core.swift */,
-				3F7D4DCAA243F0FCA896296A743A10C4 /* Helpers.swift */,
-				2B48655C1FEAD7343BF422991619D68E /* Rows.swift */,
-				CC1F1D1215D303E374D3E0FB2BB7933D /* Support Files */,
-			);
-			path = Eureka;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		665EBCDF517FC8EBABD7A8D1DA2122CD /* Pods-otiumUITests */ = {
@@ -307,53 +394,60 @@
 			path = "Target Support Files/Pods-otiumUITests";
 			sourceTree = "<group>";
 		};
-		729F6D420EC8788D9E2508F0AE06F6F6 /* GoogleSymbolUtilities */ = {
+		6C83FD14F99F844365EB234C02875408 /* TwitterCore */ = {
 			isa = PBXGroup;
 			children = (
-				117FA7EA72713A0F2587ADBFC87F31A4 /* Frameworks */,
+				D203B651A5F059E617703630023F49C9 /* Frameworks */,
 			);
-			path = GoogleSymbolUtilities;
-			sourceTree = "<group>";
-		};
-		76C5CDC1CD1C49F50884BAB6A7D166A8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F975FC5C315B26AEC4B2F67136DEDD90 /* Fabric.framework */,
-			);
-			name = Frameworks;
+			path = TwitterCore;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				AD3E357644A1A0DE6727BBCAC27D1A7F /* Pods */,
-				BA9E154E642CABEF521BF9A7556EC607 /* Products */,
+				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
+				A873D0102086F926B22813890571A1EC /* Pods */,
+				3339BDCE07F04B7B4A909D272A11E68C /* Products */,
 				D91844DB0E788F2CEBFC28471DF2672B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		82AD27544670D0C0E099EC9D6EDD6AA0 /* Support Files */ = {
+		8331947B42F03CE47EA0B6B7862FBD4C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1BADA3562A3917A0098B2C64D6AE334 /* Info.plist */,
-				E4D59859B3E8D55ED26C9B6C637E1EB0 /* Pulsator.modulemap */,
-				A6245472B068627BE5D9D5DFD6DF5AE9 /* Pulsator.xcconfig */,
-				BC8014474E768081691E7D42B8DB7FFC /* Pulsator-dummy.m */,
-				8C32CA74C671D6236A7AE9066130B8B1 /* Pulsator-prefix.pch */,
-				0913EF682285B3F0CABE869FC28F3260 /* Pulsator-umbrella.h */,
+				F6B4B96D35BA0A15DF3DA80F5DB1FAD8 /* Eureka.modulemap */,
+				1492C645F4FC51B9990F8E77A11601DD /* Eureka.xcconfig */,
+				B922CA44FEF798D53ED5D42BB9C28894 /* Eureka-dummy.m */,
+				67BEB5181C72450384CD707C92DFB8B0 /* Eureka-prefix.pch */,
+				0D020A50991DCA4ED299B264DD15E64B /* Eureka-umbrella.h */,
+				C42E8742BE7404CFB0B88EB4BE43C195 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Eureka";
+			sourceTree = "<group>";
+		};
+		8CA386FC42D2679BD5D3470C0A925BB1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				11619744C6E9C3EEB6F010CE5CC0E550 /* Info.plist */,
+				9E7077F6B6CAAD00F61B56A87755F7E3 /* Pulsator.modulemap */,
+				160CE29DA688463D0C75B70CA96BB197 /* Pulsator.xcconfig */,
+				9275BB9896432A802C3046FE85DE05E0 /* Pulsator-dummy.m */,
+				F4FB3D78E7314D0E2C89FB12EB54E74F /* Pulsator-prefix.pch */,
+				D017DB40EA39D644CE941549DCEE331A /* Pulsator-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pulsator";
 			sourceTree = "<group>";
 		};
-		9B8BC948C46D9D1165DE42DE9E79CF78 /* Frameworks */ = {
+		955D0531E69B4E7662569620121384F1 /* Pulsator */ = {
 			isa = PBXGroup;
 			children = (
-				4050628541A2C93615BEC7F60430804B /* GoogleInterchangeUtilities.framework */,
+				42E2D6D853D162EA33A13B269241ED77 /* Pulsator.swift */,
+				8CA386FC42D2679BD5D3470C0A925BB1 /* Support Files */,
 			);
-			name = Frameworks;
+			path = Pulsator;
 			sourceTree = "<group>";
 		};
 		9D8FDA5573C11882721EE7818027DDE5 /* Pods-otium */ = {
@@ -374,64 +468,56 @@
 			path = "Target Support Files/Pods-otium";
 			sourceTree = "<group>";
 		};
-		9DDC15E14680EBBE704E3AE3051DCB01 /* Frameworks */ = {
+		A069F4E97D952D0FD2A6FD6612DC279D /* TwitterKit */ = {
 			isa = PBXGroup;
 			children = (
-				8DF42409480B17F8B1C14F847207622C /* FirebaseAnalytics.framework */,
+				64555706D0AF8370CA8805DE1D77821F /* Frameworks */,
+				0241990E676B92E045B988DE6CA222F5 /* Resources */,
 			);
-			name = Frameworks;
+			path = TwitterKit;
 			sourceTree = "<group>";
 		};
-		A4C8FD945AF12AD8D65B6E37E5843D65 /* GoogleInterchangeUtilities */ = {
+		A873D0102086F926B22813890571A1EC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B8BC948C46D9D1165DE42DE9E79CF78 /* Frameworks */,
-			);
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		AD3E357644A1A0DE6727BBCAC27D1A7F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6087304DDFD8E71F20F6A3B6E99E3829 /* Eureka */,
-				1D4A669B28941FDDFFE9AF2D53E2B515 /* Fabric */,
-				165E49161073B26B9FDD7FD8DE03B4DF /* Firebase */,
-				5ED6EAE92F09EC299387B5233EAB4842 /* FirebaseAnalytics */,
-				5E82FD61C1C0ABE019F5062933283D8B /* FirebaseInstanceID */,
-				A4C8FD945AF12AD8D65B6E37E5843D65 /* GoogleInterchangeUtilities */,
-				729F6D420EC8788D9E2508F0AE06F6F6 /* GoogleSymbolUtilities */,
-				EC80E3E90FBD14FC5C3CB2004A34E6BE /* GoogleUtilities */,
-				DF5328C4C16ECA704109E4FEF14D9FFF /* Pulsator */,
-				E97891BB4E1C64DDE0947B85540DDD0B /* TwitterCore */,
-				0B31579E1CEAEE398643B69893E4884C /* TwitterKit */,
+				0457C11499B6477317412BAD5A0FEBDA /* Eureka */,
+				C6BE17D010F952CA3D779A2DA278D2DC /* Fabric */,
+				42C461FE19B9237D12A51183F515C5F2 /* Firebase */,
+				955D0531E69B4E7662569620121384F1 /* Pulsator */,
+				31E3ED477F226F1FAD6D52F26F151D6E /* SwiftyJSON */,
+				6C83FD14F99F844365EB234C02875408 /* TwitterCore */,
+				A069F4E97D952D0FD2A6FD6612DC279D /* TwitterKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BA9E154E642CABEF521BF9A7556EC607 /* Products */ = {
+		BA98A8BE3EAD4A96AE869A6C0EA84300 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				77A7FBD4799389BA08D481EF158A007C /* Eureka.framework */,
-				B27CEAD91E2F6A44D9D279B931D77A40 /* Pods_otium.framework */,
-				BE8CEC06833C4D9AEBC7E6EAA94799AC /* Pods_otiumTests.framework */,
-				4DCC7464EBEE1750944B027E1F45E3EF /* Pods_otiumUITests.framework */,
-				9A26D8073C4D022CEA740C29912DA7B2 /* Pulsator.framework */,
+				EB760A15FCDA0D7A6A344FD6858DF757 /* CFNetwork.framework */,
+				391635DF889C67F16DEC9152ACDB2439 /* Foundation.framework */,
+				D55650C8BB58DD07104A320FBC452557 /* QuartzCore.framework */,
+				B767BE47760825F465FEA8473646DFAA /* Security.framework */,
+				A809251E1CEED79A59D2901CB8B52CAF /* SystemConfiguration.framework */,
+				F201DE2AC1E9EA4F10847C0518489E9B /* UIKit.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		CC1F1D1215D303E374D3E0FB2BB7933D /* Support Files */ = {
+		C6BE17D010F952CA3D779A2DA278D2DC /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				6399F5940F8E1D47591B61D9C347FA11 /* Eureka.modulemap */,
-				FDEFF32CA55376BD317FF49F495A83AC /* Eureka.xcconfig */,
-				A4CC74DE4E3DB541D6831E8CF7720A7A /* Eureka-dummy.m */,
-				33033F7796F1F6EF442AFE08EE036399 /* Eureka-prefix.pch */,
-				6D3FC064613A8C1D3C89E94A0A7AE8D1 /* Eureka-umbrella.h */,
-				E6B557C81048C9986DF20BD40E73DD22 /* Info.plist */,
+				5B48F88A77E8B9AA64773B2DF59AD057 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Eureka";
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		D203B651A5F059E617703630023F49C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D87281991CAC18BF4403CB4AB8C3B3C /* TwitterCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D91844DB0E788F2CEBFC28471DF2672B /* Targets Support Files */ = {
@@ -444,60 +530,31 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DBD1EBF724F0A6D251E7BF09003E2298 /* Frameworks */ = {
+		F7DF7EA4257D30A64650F2AD45E6C857 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E6D9294BEADA38F6BB3376AF525D5AC0 /* FirebaseInstanceID.framework */,
+				10A700734E3860A2A13904674C1CEB76 /* Firebase.modulemap */,
+				A1BE729939438DA2A045E68B038A8777 /* Firebase.xcconfig */,
+				C339E094C3C863CF57E66C971C3F1FA7 /* Firebase-dummy.m */,
+				91E652F36F448EEB95EFFAF93750468B /* Firebase-prefix.pch */,
+				079B9CA9196C4A09284FC954A22F2871 /* Firebase-umbrella.h */,
+				3E6ADD6EE7BBFF0E91B8C58FFE3F1DD7 /* Info.plist */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DF5328C4C16ECA704109E4FEF14D9FFF /* Pulsator */ = {
-			isa = PBXGroup;
-			children = (
-				15E3F7F0FCE98D60A9B47C143F10BD94 /* Pulsator.swift */,
-				82AD27544670D0C0E099EC9D6EDD6AA0 /* Support Files */,
-			);
-			path = Pulsator;
-			sourceTree = "<group>";
-		};
-		DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */,
-				23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */,
-				091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E97891BB4E1C64DDE0947B85540DDD0B /* TwitterCore */ = {
-			isa = PBXGroup;
-			children = (
-				EAEF25BB615AF504648913431F7FD45D /* Frameworks */,
-			);
-			path = TwitterCore;
-			sourceTree = "<group>";
-		};
-		EAEF25BB615AF504648913431F7FD45D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E8C14F8AE84B3894392BBCA8EA709C6 /* TwitterCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EC80E3E90FBD14FC5C3CB2004A34E6BE /* GoogleUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				569F19D63D630FD8D78FF8A6CF15D653 /* Frameworks */,
-			);
-			path = GoogleUtilities;
+			name = "Support Files";
+			path = "../Target Support Files/Firebase";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		27DB844DB6557B08BD5E273D95D9F166 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8A6AAF22475EF5702499CA710AFB6D3 /* Pulsator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		289C21F5EE16DCA46F57BC722772429E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,19 +563,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		311511FDCEE5ED06B5DC461A567BB915 /* Headers */ = {
+		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D668394649DD98324BC8777A81D6AD53 /* Pulsator-umbrella.h in Headers */,
+				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
+				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
+				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
+				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
+				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
+				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
+				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
+				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
+				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
+				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
+				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
+				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CD226707F4A106E4FA87008FDF8C5D8 /* Headers */ = {
+		5821CB46F63D6082574B06C521AA7498 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43A98AC61155EE7E8152191D5E516E1 /* Pods-otium-umbrella.h in Headers */,
+				15F8A2641EC970B7480AD1EA9BBE7AD0 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +595,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E52D5180B8080C290DB1BE94C2B97172 /* Eureka-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38619B93E5028720C64B30EE10DED30 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00D2EFAED8B912B44E045D75E87FB5C /* Pods-otium-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +631,7 @@
 			);
 			name = "Pods-otiumTests";
 			productName = "Pods-otiumTests";
-			productReference = BE8CEC06833C4D9AEBC7E6EAA94799AC /* Pods_otiumTests.framework */;
+			productReference = 7D30B55AB2E004FF1B4EAA144A8528D3 /* Pods_otiumTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		31EF08F3444DCD2B169D92269C5BCD3D /* Eureka */ = {
@@ -572,35 +648,16 @@
 			);
 			name = Eureka;
 			productName = Eureka;
-			productReference = 77A7FBD4799389BA08D481EF158A007C /* Eureka.framework */;
+			productReference = 8517621B7F8A85C49DEEDE8815BC21E6 /* Eureka.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B17227A0D4BBE969141C972CA3E38D88 /* Pods-otium */ = {
+		7760BCCF0849A718F031B5C0AD628410 /* Pulsator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02A9C646114512946660BAB4142B5FE2 /* Build configuration list for PBXNativeTarget "Pods-otium" */;
+			buildConfigurationList = BC2B8B30B4751FDCDCCE153694FD476A /* Build configuration list for PBXNativeTarget "Pulsator" */;
 			buildPhases = (
-				90671F5C7DEAED3B034E37CDB0DA8122 /* Sources */,
-				98E0FAF81B35AAB70B4FDEFF32C41210 /* Frameworks */,
-				6CD226707F4A106E4FA87008FDF8C5D8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5549EFC6E4CB73F5B4E2BEFF5A3774BA /* PBXTargetDependency */,
-				AE8BFABCBAD8CC8F2DD02C345E4347DF /* PBXTargetDependency */,
-			);
-			name = "Pods-otium";
-			productName = "Pods-otium";
-			productReference = B27CEAD91E2F6A44D9D279B931D77A40 /* Pods_otium.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B4C02E29F7663237322CE494697A592E /* Pulsator */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14F0D3D73EFF8FE3C1F4D6FDB2963EFE /* Build configuration list for PBXNativeTarget "Pulsator" */;
-			buildPhases = (
-				1AEA97982BFFDA0D2EA2C61DA43F22F1 /* Sources */,
-				8B13E0FA6AA14364484DDA6762002A9E /* Frameworks */,
-				311511FDCEE5ED06B5DC461A567BB915 /* Headers */,
+				1E841FEA14C29815E787B82D0BC38875 /* Sources */,
+				F52F66B3C2C1A8F96A7F85E693A9D4D3 /* Frameworks */,
+				27DB844DB6557B08BD5E273D95D9F166 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -608,7 +665,62 @@
 			);
 			name = Pulsator;
 			productName = Pulsator;
-			productReference = 9A26D8073C4D022CEA740C29912DA7B2 /* Pulsator.framework */;
+			productReference = BE984B50855A9A2DA501A9255898B8F5 /* Pulsator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9074C60ABF72F9715863C8D4CC9A8971 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB422ECE351E92FCB68991F20677A3D4 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				7043757D98FC4533780B59176BAAE89A /* Sources */,
+				D6CB202DC3122E0E362D811CC161805B /* Frameworks */,
+				5821CB46F63D6082574B06C521AA7498 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 00AB8571B13825BD7200B32A6D7F85E2 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B71E6F3613025FA982471BEED290A29F /* Pods-otium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35F3D2EAB0649018742B44607C29BE88 /* Build configuration list for PBXNativeTarget "Pods-otium" */;
+			buildPhases = (
+				9BB154A85F3E595993F76DCED9C72736 /* Sources */,
+				E53623687C1C8EA7ED98C25AD6F33060 /* Frameworks */,
+				B38619B93E5028720C64B30EE10DED30 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB1759FC51EB6512EECA6092E4487050 /* PBXTargetDependency */,
+				2545907719E62C85244BB2EB45AF6000 /* PBXTargetDependency */,
+				4920BC7ACEA1C34C42FDF496F57CBC5D /* PBXTargetDependency */,
+				5946A9FD8AC57CBF9DBE90BBE54562AD /* PBXTargetDependency */,
+			);
+			name = "Pods-otium";
+			productName = "Pods-otium";
+			productReference = 2F5259A3792A43C18933F58A4838A395 /* Pods_otium.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildPhases = (
+				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
+				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
+				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Firebase;
+			productName = Firebase;
+			productReference = FEC37685216EBA5DA7719B5EB865AA0D /* Firebase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CF4EA3C3860B9A52E6CE7B0BB8508B11 /* Pods-otiumUITests */ = {
@@ -625,7 +737,7 @@
 			);
 			name = "Pods-otiumUITests";
 			productName = "Pods-otiumUITests";
-			productReference = 4DCC7464EBEE1750944B027E1F45E3EF /* Pods_otiumUITests.framework */;
+			productReference = 94A53D73B212319F8DF526038F6D5DB7 /* Pods_otiumUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -645,26 +757,46 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BA9E154E642CABEF521BF9A7556EC607 /* Products */;
+			productRefGroup = 3339BDCE07F04B7B4A909D272A11E68C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				31EF08F3444DCD2B169D92269C5BCD3D /* Eureka */,
-				B17227A0D4BBE969141C972CA3E38D88 /* Pods-otium */,
+				B7AC9326D819482593FE118E915409D7 /* Firebase */,
+				B71E6F3613025FA982471BEED290A29F /* Pods-otium */,
 				2DB34E0B4351A5FE909D384B07211851 /* Pods-otiumTests */,
 				CF4EA3C3860B9A52E6CE7B0BB8508B11 /* Pods-otiumUITests */,
-				B4C02E29F7663237322CE494697A592E /* Pulsator */,
+				7760BCCF0849A718F031B5C0AD628410 /* Pulsator */,
+				9074C60ABF72F9715863C8D4CC9A8971 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1AEA97982BFFDA0D2EA2C61DA43F22F1 /* Sources */ = {
+		1E841FEA14C29815E787B82D0BC38875 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3E501B4F088939AB644ABC0BA128C6 /* Pulsator-dummy.m in Sources */,
-				3FF7AECF499252EE5F731C45BDDA0F66 /* Pulsator.swift in Sources */,
+				7FE1BBAF101DF8F003D7C1AD132EF88A /* Pulsator-dummy.m in Sources */,
+				1C987AE7DB383B20E4F49E8088AF9287 /* Pulsator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
+				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7043757D98FC4533780B59176BAAE89A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74671B073B191FA52865273FCB093B8B /* SwiftyJSON-dummy.m in Sources */,
+				62FFF3BC619C1302B3506CA7158DBE56 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,11 +808,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90671F5C7DEAED3B034E37CDB0DA8122 /* Sources */ = {
+		9BB154A85F3E595993F76DCED9C72736 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277280B9E275BECA31670E4539B736C0 /* Pods-otium-dummy.m in Sources */,
+				67F62101693CDEF9F1312BB735B51EA3 /* Pods-otium-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,17 +840,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5549EFC6E4CB73F5B4E2BEFF5A3774BA /* PBXTargetDependency */ = {
+		2545907719E62C85244BB2EB45AF6000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = C1C5E002EB957B0B486E7A78D3924C31 /* PBXContainerItemProxy */;
+		};
+		4920BC7ACEA1C34C42FDF496F57CBC5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Pulsator;
+			target = 7760BCCF0849A718F031B5C0AD628410 /* Pulsator */;
+			targetProxy = 247E85F9BDE6F7D30D724EB3A3612245 /* PBXContainerItemProxy */;
+		};
+		5946A9FD8AC57CBF9DBE90BBE54562AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 9074C60ABF72F9715863C8D4CC9A8971 /* SwiftyJSON */;
+			targetProxy = 77122023A958DAA3ED7C3E18AA2FCEC5 /* PBXContainerItemProxy */;
+		};
+		CB1759FC51EB6512EECA6092E4487050 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Eureka;
 			target = 31EF08F3444DCD2B169D92269C5BCD3D /* Eureka */;
-			targetProxy = 63E2C9574F27D0552AC02C876A04776D /* PBXContainerItemProxy */;
-		};
-		AE8BFABCBAD8CC8F2DD02C345E4347DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Pulsator;
-			target = B4C02E29F7663237322CE494697A592E /* Pulsator */;
-			targetProxy = B81D41C3A1EA50AECCC5F179449F457D /* PBXContainerItemProxy */;
+			targetProxy = E4B4E885C454719BD0C8651842BB8B3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -761,9 +905,9 @@
 			};
 			name = Release;
 		};
-		16F193C1AEDBFF3739636AC9E40FD3AE /* Release */ = {
+		206A4E6B542F79F187A7C5BFFD800D65 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6245472B068627BE5D9D5DFD6DF5AE9 /* Pulsator.xcconfig */;
+			baseConfigurationReference = 160CE29DA688463D0C75B70CA96BB197 /* Pulsator.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -825,7 +969,7 @@
 		};
 		54E3A077B50E60F2EB7DCCC437EC6BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDEFF32CA55376BD317FF49F495A83AC /* Eureka.xcconfig */;
+			baseConfigurationReference = 1492C645F4FC51B9990F8E77A11601DD /* Eureka.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -844,6 +988,36 @@
 				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70B4D592DAABEE3F3865AB83AE325580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160CE29DA688463D0C75B70CA96BB197 /* Pulsator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pulsator/Pulsator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pulsator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pulsator/Pulsator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Pulsator;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -886,42 +1060,9 @@
 			};
 			name = Debug;
 		};
-		8DBB45DD3C9B9D617B4A3664D2B0A608 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD54C3DCBB619731B9A3B7A207A95A7 /* Pods-otium.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-otium/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-otium/Pods-otium.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_otium;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		98ED92EFB6AE696F95AFD5536BC29EE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDEFF32CA55376BD317FF49F495A83AC /* Eureka.xcconfig */;
+			baseConfigurationReference = 1492C645F4FC51B9990F8E77A11601DD /* Eureka.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -947,6 +1088,157 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		99DCEB79592DE16F21210EC6FCA5C5EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1626F7AFD028A18575E8E78177117564 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E5F9A409F7A80E320328AA627E5F72F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1BE729939438DA2A045E68B038A8777 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9FB33890891654F24247B38F1E674261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F5CB3F50940FAFDB3A118AFD7AA4F0 /* Pods-otium.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-otium/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-otium/Pods-otium.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_otium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A137EDCFE721980B861039D09E3342BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1BE729939438DA2A045E68B038A8777 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A472F9B7226FAF51A92285380D312D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1626F7AFD028A18575E8E78177117564 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C2143C616AFB948E03F4DF25FAB901FA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -980,36 +1272,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		C30EEBC6157B742FF8955F2454D0BA50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6245472B068627BE5D9D5DFD6DF5AE9 /* Pulsator.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pulsator/Pulsator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pulsator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pulsator/Pulsator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Pulsator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1086,13 +1348,13 @@
 			};
 			name = Release;
 		};
-		F4756F2FB135A339B6B31876C71F275A /* Debug */ = {
+		F3B506181DC19291D798AED28BBD0139 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2F5CB3F50940FAFDB3A118AFD7AA4F0 /* Pods-otium.debug.xcconfig */;
+			baseConfigurationReference = 9CD54C3DCBB619731B9A3B7A207A95A7 /* Pods-otium.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1105,7 +1367,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-otium/Pods-otium.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1113,39 +1375,20 @@
 				PRODUCT_NAME = Pods_otium;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02A9C646114512946660BAB4142B5FE2 /* Build configuration list for PBXNativeTarget "Pods-otium" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4756F2FB135A339B6B31876C71F275A /* Debug */,
-				8DBB45DD3C9B9D617B4A3664D2B0A608 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		03FB49DB4C426AD3FD813E95C1B59705 /* Build configuration list for PBXNativeTarget "Pods-otiumUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73ECC04C297C738D2044D92E1AC96B3D /* Debug */,
 				C2143C616AFB948E03F4DF25FAB901FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14F0D3D73EFF8FE3C1F4D6FDB2963EFE /* Build configuration list for PBXNativeTarget "Pulsator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C30EEBC6157B742FF8955F2454D0BA50 /* Debug */,
-				16F193C1AEDBFF3739636AC9E40FD3AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1168,11 +1411,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		35F3D2EAB0649018742B44607C29BE88 /* Build configuration list for PBXNativeTarget "Pods-otium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FB33890891654F24247B38F1E674261 /* Debug */,
+				F3B506181DC19291D798AED28BBD0139 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E5F9A409F7A80E320328AA627E5F72F /* Debug */,
+				A137EDCFE721980B861039D09E3342BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC2B8B30B4751FDCDCCE153694FD476A /* Build configuration list for PBXNativeTarget "Pulsator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70B4D592DAABEE3F3865AB83AE325580 /* Debug */,
+				206A4E6B542F79F187A7C5BFFD800D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BE81CBA7FE9E61766B15466DE5A60C88 /* Build configuration list for PBXNativeTarget "Eureka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54E3A077B50E60F2EB7DCCC437EC6BC4 /* Debug */,
 				98ED92EFB6AE696F95AFD5536BC29EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB422ECE351E92FCB68991F20677A3D4 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A472F9B7226FAF51A92285380D312D66 /* Debug */,
+				99DCEB79592DE16F21210EC6FCA5C5EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

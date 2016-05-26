@@ -32,6 +32,6 @@ class Configuration
         return self._minor
     }
     
-    private init() {}
-    
+    private init() {
+    }
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B17227A0D4BBE969141C972CA3E38D88"
+               BlueprintIdentifier = "B71E6F3613025FA982471BEED290A29F"
                BuildableName = "Pods_otium.framework"
                BlueprintName = "Pods-otium"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B17227A0D4BBE969141C972CA3E38D88"
+            BlueprintIdentifier = "B71E6F3613025FA982471BEED290A29F"
             BuildableName = "Pods_otium.framework"
             BlueprintName = "Pods-otium"
             ReferencedContainer = "container:Pods.xcodeproj">

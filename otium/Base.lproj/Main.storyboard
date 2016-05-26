@@ -60,8 +60,24 @@
                     <view key="view" contentMode="scaleToFill" id="5S0-DJ-AAR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gT6-s8-Qfd">
+                                <rect key="frame" x="542" y="550" width="30" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skip_btn:" destination="qcE-hM-9cy" eventType="touchUpInside" id="qVc-tU-cT3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gT6-s8-Qfd" secondAttribute="bottom" constant="20" symbolic="YES" id="6xt-Md-DuE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gT6-s8-Qfd" secondAttribute="trailing" constant="8" id="iqB-p3-v4C"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="skip_btn" destination="gT6-s8-Qfd" id="o6M-p8-0rq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KB7-W8-PZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

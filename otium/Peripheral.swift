@@ -13,8 +13,10 @@ class Peripheral: CBPeripheralManager {
     private static let sharedInstance = Peripheral()
     private let beaconIdentifier = Configuration.Identifier()
     private let uuidString = Configuration.UUID()
-    private let major = Configuration.Major()
-    private let minor = Configuration.Minor()
+    var major: CLBeaconMajorValue = 1
+    var minor: CLBeaconMajorValue = 1
+    
+    
     
     static func startAdvertising() {
         sharedInstance.delegate = sharedInstance
@@ -55,8 +57,35 @@ extension Peripheral: CBPeripheralManagerDelegate {
             return
         }
         
+        setUserInfo()
+        
         let beaconRegion = CLBeaconRegion(proximityUUID: proximityUUID, major: major, minor: minor, identifier: beaconIdentifier)
         let beaconPeripheralData: NSDictionary = beaconRegion.peripheralDataWithMeasuredPower(nil)
         manager.startAdvertising(beaconPeripheralData as? [String: AnyObject])
     }
+    
+    func setUserInfo(){
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("otium_major")) != nil){
+            //objectsを配列として確定させ、前回の保存内容を格納
+            major = CLBeaconMajorValue((defaults.objectForKey("otium_major")! as! String))!
+            print("periperal : Major : \(major)")
+        }else{
+            print("error : periperal : nil : Major")
+        }
+        if((defaults.objectForKey("otium_minor")) != nil){
+            minor = CLBeaconMinorValue((defaults.objectForKey("otium_minor")! as! String))!
+            print("periperal : Minorr:\(minor)")
+        }else{
+            print("error : periperal : nil:Minor")
+        }
+        //  connectFirebase.inital_set(otium_major+otium_minor)
+        //   connectFirebase.set_major(otium_major)
+        //   connectFirebase.set_minor(otium_minor)
+    }
+
 }
+

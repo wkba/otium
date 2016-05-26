@@ -28,14 +28,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     
     private var pageControl: UIPageControl!
     private var scrollView: UIScrollView!
-    private let major = Configuration.Major()
-    private let minor = Configuration.Minor()
+   // private let major = Configuration.Major()
+    //private let minor = Configuration.Minor()
     private let connectFirebase = ConnectFirebase()
+    var distance = 0.00
+    var beacons_all : [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        Peripheral.startAdvertising()
         // ビューの縦、横のサイズを取得する.
         let width = self.view.frame.maxX, height = self.view.frame.maxY
         // ScrollViewを取得する.
@@ -77,7 +80,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             distanceLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
             distanceLabel.textColor = UIColor.whiteColor()
             distanceLabel.textAlignment = NSTextAlignment.Center
-            distanceLabel.text = "稲村さんがあなたにいいねを押しました。\(major):\(minor)"
+          //  distanceLabel.text = "稲村さんがあなたにいいねを押しました。\(major):\(minor)"
+            distanceLabel.text = "稲村さんがあなたにいいねを押しました。"
             distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
             scrollView.addSubview(distanceLabel)
             
@@ -167,12 +171,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         if (knownBeacons.count > 0) {
             let closestBeacon = knownBeacons[0] as CLBeacon
             self.view.backgroundColor = self.colors[closestBeacon.minor.integerValue % 3]
-            print(closestBeacon.accuracy)
-            print(beacons)
+         // print(beacons)
             self.noFriendLabel.text = "友達発見！\(closestBeacon.major) : \(closestBeacon.minor):  \(closestBeacon.accuracy)"
-            pulsator.numPulse = 1
-            pulsator.radius = 240.0
-            pulsator.start()
+            if(fabs(distance - closestBeacon.accuracy) > 0.15){
+                FixPulsaor(closestBeacon.accuracy)
+                print("MianVC: changed パルス")
+            }
+            distance = closestBeacon.accuracy
+            let id = "\(closestBeacon.major)\(closestBeacon.minor)"
+            var target_major = connectFirebase.read_major(id)
+            if(beacons_all.indexOf(target_major) == nil){
+                print(target_major)
+            }else{
+                beacons_all.append(target_major)
+            }
 
         }else{
             self.noFriendLabel.text = "周りに誰もいません。"
@@ -246,16 +258,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     }
     
     func FixPulsaor(accuracy: CLLocationAccuracy){
+        pulsator.radius = 240.0
         if(accuracy<1){
-            pulsator.numPulse = 6
-            pulsator.radius = 240.0
-            pulsator.repeatCount = 7
-            pulsator.start()
+            pulsator.numPulse = 3
         }else if(accuracy<5){
             pulsator.numPulse = 2
-            pulsator.radius = 240.0
-            pulsator.start()
+        }else{
+            pulsator.numPulse = 1
         }
+        pulsator.start()
     }
 }
-

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Firebase.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-otium.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,12 @@
 		<key>Pulsator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -42,12 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B17227A0D4BBE969141C972CA3E38D88</key>
+		<key>7760BCCF0849A718F031B5C0AD628410</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4C02E29F7663237322CE494697A592E</key>
+		<key>9074C60ABF72F9715863C8D4CC9A8971</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B71E6F3613025FA982471BEED290A29F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7AC9326D819482593FE118E915409D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

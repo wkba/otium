@@ -12,6 +12,9 @@ import Firebase
 class ConnectFirebase{
 
     private var userURL = Firebase(url:"https://otium.firebaseio.com")
+    private var targetURL = Firebase(url:"https://otium.firebaseio.com")
+    var target_major = "error"
+
 
     init(){
 
@@ -50,5 +53,39 @@ class ConnectFirebase{
     func set_purpose(purpose:String){
         userURL.childByAppendingPath("purpose").setValue(purpose)
     }
+    
+    
+    func read_major(id:String) -> String{
+        
+        targetURL.childByAppendingPath(id).childByAppendingPath("major").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.target_major = "\(snapshot.value)"
+        })
+        return target_major
+    }
+    func read_minor(minor:String){
+        userURL.childByAppendingPath("minor").setValue(minor)
+    }
+    func read_userID(id:String){
+        userURL.childByAppendingPath("userID").setValue(id)
+    }
+    func read_userName(name:String){
+        userURL.childByAppendingPath("userName").setValue(name)
+    }
+    func read_image(image_url:String){
+        userURL.childByAppendingPath("image").setValue(image_url)
+    }
+    func read_out_count(){
+        userURL.childByAppendingPath("out").setValue("out")
+    }
+    func read_comment(comment:String){
+        userURL.childByAppendingPath("comment").setValue(comment)
+    }
+    func read_purpose(purpose:String){
+        userURL.childByAppendingPath("purpose").setValue(purpose)
+    }
+    
+    
+    
     
 }
