@@ -14,10 +14,18 @@ class ConnectFirebase{
     private var userURL = Firebase(url:"https://otium.firebaseio.com")
     private var targetURL = Firebase(url:"https://otium.firebaseio.com")
     var target_major = "error"
+    var major = "error"
+    var minor = "error"
+    var name = "error"
+    var id = "error"
+    var imageUrl = "error"
+    var outCount = "error"
+    var comment = "error"
+    var purpose = "error"
+    
 
 
     init(){
-
     }
     
     func save(words:String){
@@ -63,29 +71,47 @@ class ConnectFirebase{
         })
         return target_major
     }
-    func read_minor(minor:String){
+    func read_minor(id:String){
         userURL.childByAppendingPath("minor").setValue(minor)
     }
-    func read_userID(id:String){
-        userURL.childByAppendingPath("userID").setValue(id)
+    func read_userID(id:String) -> String{
+        targetURL.childByAppendingPath(id).childByAppendingPath("userID").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.id = "\(snapshot.value)"
+        })
+        return id
     }
-    func read_userName(name:String){
-        userURL.childByAppendingPath("userName").setValue(name)
+    func read_userName(id:String) -> String{
+        targetURL.childByAppendingPath(id).childByAppendingPath("userName").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.name = "\(snapshot.value)"
+        })
+        return name
     }
-    func read_image(image_url:String){
-        userURL.childByAppendingPath("image").setValue(image_url)
+    func read_image(id:String) -> String{
+        targetURL.childByAppendingPath(id).childByAppendingPath("image").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.imageUrl = "\(snapshot.value)"
+        })
+        return imageUrl
     }
     func read_out_count(){
+        //ToDo:若林
         userURL.childByAppendingPath("out").setValue("out")
     }
-    func read_comment(comment:String){
-        userURL.childByAppendingPath("comment").setValue(comment)
+    func read_comment(id:String)->String{
+        targetURL.childByAppendingPath(id).childByAppendingPath("comment").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.comment = "\(snapshot.value)"
+        })
+        return comment
     }
-    func read_purpose(purpose:String){
-        userURL.childByAppendingPath("purpose").setValue(purpose)
+    func read_purpose(purpose:String)->String{
+        targetURL.childByAppendingPath(id).childByAppendingPath("purpose").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.purpose = "\(snapshot.value)"
+        })
+        return purpose
     }
-    
-    
-    
     
 }

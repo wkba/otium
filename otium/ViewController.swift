@@ -179,16 +179,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             }
             distance = closestBeacon.accuracy
             let id = "\(closestBeacon.major)\(closestBeacon.minor)"
-            var target_major = connectFirebase.read_major(id)
-            if(beacons_all.indexOf(target_major) == nil){
-                print(target_major)
-            }else{
-                beacons_all.append(target_major)
-            }
+            var twitterId = connectFirebase.read_userID(id)
+            var twitterName = connectFirebase.read_userName(id)
+            var twitterImageUrl = connectFirebase.read_image(id)
+            var purpose = connectFirebase.read_purpose(id)
+            print(twitterId)
+            print(twitterName)
+            print(twitterImageUrl)
 
         }else{
             self.noFriendLabel.text = "周りに誰もいません。"
         }
+        //print(knownBeacons[0].minor)
     }
 
     // setBackgroundColor
