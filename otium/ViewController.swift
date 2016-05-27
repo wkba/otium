@@ -13,8 +13,12 @@ import Pulsator
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var newsLabel: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var bellBtn: UIButton!
     @IBOutlet weak var noFriendLabel: UILabel!
     @IBOutlet weak var pulse: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: Configuration.UUID())!, identifier: "Estimotes")
     let colors = [
@@ -26,23 +30,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     let pulsator = Pulsator()
     let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
     
+    @IBOutlet weak var settingBtn: UIButton!
     private var pageControl: UIPageControl!
-    private var scrollView: UIScrollView!
+    //private var scrollView: UIScrollView!
    // private let major = Configuration.Major()
     //private let minor = Configuration.Minor()
     private let connectFirebase = ConnectFirebase()
     var distance = 0.00
     var beacons_all : [String] = []
+    //UIViewController.viewの座標取得
+    var x:CGFloat = 0.0
+    var y:CGFloat = 0.0
+    
+    //UIViewController.viewの幅と高さを取得
+    var width:CGFloat = 0.0
+    var height:CGFloat = 0.0
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //UIViewController.viewの座標取得
+        x = self.view.bounds.origin.x
+        y = self.view.bounds.origin.y
+        // ビューの縦、横のサイズを取得する.
+        width = self.view.frame.maxX
+        height = self.view.frame.maxY
         
         Peripheral.startAdvertising()
-        // ビューの縦、横のサイズを取得する.
-        let width = self.view.frame.maxX, height = self.view.frame.maxY
         // ScrollViewを取得する.
-        scrollView = UIScrollView(frame: self.view.frame)
+        //scrollView = UIScrollView(frame: self.view.frame)
         // ページ数を定義する.
         let pageSize = 4
         // 縦方向と、横方向のインディケータを非表示にする.
@@ -55,7 +72,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         // スクロールの画面サイズを指定する.
         scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
         // ScrollViewをViewに追加する.
-        self.view.addSubview(scrollView)
+        //self.view.addSubview(scrollView)
     
         // ページ数分ボタンを生成する.
         for var i = 0; i < pageSize; i++ {
@@ -68,22 +85,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             //scrollView.addSubview(loveLabel)
             
             // distanceLabelを生成する.
-            var distanceLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 50, 60, 30))
-            distanceLabel.textColor = UIColor.whiteColor()
-            distanceLabel.textAlignment = NSTextAlignment.Center
-            distanceLabel.text = "距離: \(i)"
-            distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            //scrollView.addSubview(distanceLabel)
-            
-            
-            // distanceLabelを生成する.
-            distanceLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
-            distanceLabel.textColor = UIColor.whiteColor()
-            distanceLabel.textAlignment = NSTextAlignment.Center
+            //newsLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
+            newsLabel.textColor = UIColor.whiteColor()
+            newsLabel.textAlignment = NSTextAlignment.Center
           //  distanceLabel.text = "稲村さんがあなたにいいねを押しました。\(major):\(minor)"
-            distanceLabel.text = "稲村さんがあなたにいいねを押しました。"
-            distanceLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            scrollView.addSubview(distanceLabel)
+            newsLabel.text = "稲村さんがあなたにいいねを押しました。"
+            newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+            //scrollView.addSubview(newsLabel)
             
             
         }
@@ -107,18 +115,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         //animetion()
         
         
-        let settingBtn = UIButton()
+
         settingBtn.frame = CGRectMake(20, 40, 45, 45)
         settingBtn.setImage(UIImage(named: "gear.png"), forState: .Normal)
         settingBtn.imageView?.contentMode = .ScaleAspectFit
-        self.view.addSubview(settingBtn)
+        //self.view.addSubview(settingBtn)
         
-        let bellBtn = UIButton()
         bellBtn.frame = CGRectMake(myBoundSize.width - 20 - 45, 40, 45, 45)
         bellBtn.setImage(UIImage(named: "bell.png"), forState: .Normal)
         bellBtn.imageView?.contentMode = .ScaleAspectFit
         bellBtn.alpha = 0.6
-        self.view.addSubview(bellBtn)
+        //self.view.addSubview(bellBtn)
 
         
         //MARK: central
@@ -172,7 +179,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             let closestBeacon = knownBeacons[0] as CLBeacon
             self.view.backgroundColor = self.colors[closestBeacon.minor.integerValue % 3]
          // print(beacons)
-            self.noFriendLabel.text = "友達発見！\(closestBeacon.major) : \(closestBeacon.minor):  \(closestBeacon.accuracy)"
+            self.noFriendLabel.hidden = true
+            //self.noFriendLabel.text = "友達発見！\(closestBeacon.major) : \(closestBeacon.minor):  \(closestBeacon.accuracy)"
             if(fabs(distance - closestBeacon.accuracy) > 0.15){
                 FixPulsaor(closestBeacon.accuracy)
                 print("MianVC: changed パルス")
@@ -182,12 +190,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             var twitterId = connectFirebase.read_userID(id)
             var twitterName = connectFirebase.read_userName(id)
             var twitterImageUrl = connectFirebase.read_image(id)
-            var purpose = connectFirebase.read_purpose(id)
-            print(twitterId)
-            print(twitterName)
-            print(twitterImageUrl)
+            setImage(twitterImageUrl)
+            //var purpose = connectFirebase.read_purpose(id)
+            //print(twitterId)
+           // print(twitterName)
+           // print(twitterImageUrl)
 
         }else{
+            self.noFriendLabel.hidden = false
             self.noFriendLabel.text = "周りに誰もいません。"
         }
         //print(knownBeacons[0].minor)
@@ -269,5 +279,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             pulsator.numPulse = 1
         }
         pulsator.start()
+    }
+    
+    func setImage(target_url:String){
+        if(target_url != "error"){
+            let url = NSURL(string: target_url);
+            let imgData: NSData
+            do {
+                imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let img = UIImage(data:imgData)
+                imgView.image = img
+                imgView.frame = CGRectMake(width/2 - 100, height/2 - 100, 200, 200)
+                //self.view.addSubview(imgView)
+            } catch {
+                print("Error: can't create image.")
+            }
+        }
     }
 }

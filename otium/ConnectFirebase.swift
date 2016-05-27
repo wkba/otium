@@ -74,8 +74,8 @@ class ConnectFirebase{
     func read_minor(id:String){
         userURL.childByAppendingPath("minor").setValue(minor)
     }
-    func read_userID(id:String) -> String{
-        targetURL.childByAppendingPath(id).childByAppendingPath("userID").observeEventType(.Value, withBlock: {
+    func read_userID(target_id:String) -> String{
+        targetURL.childByAppendingPath(target_id).childByAppendingPath("userID").observeEventType(.Value, withBlock: {
             snapshot in
             self.id = "\(snapshot.value)"
         })
