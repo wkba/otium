@@ -70,7 +70,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         // ScrollViewのデリゲートを設定する.
         scrollView.delegate = self
         // スクロールの画面サイズを指定する.
-        scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
+        //scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
+        scrollView.contentSize = CGSizeMake(3000, 2000)
         // ScrollViewをViewに追加する.
         //self.view.addSubview(scrollView)
     
