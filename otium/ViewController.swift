@@ -12,13 +12,10 @@ import Pulsator
 
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
-    
-    @IBOutlet weak var newsLabel: UILabel!
-    @IBOutlet weak var imgView: UIImageView!
+
     @IBOutlet weak var bellBtn: UIButton!
     @IBOutlet weak var noFriendLabel: UILabel!
     @IBOutlet weak var pulse: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: Configuration.UUID())!, identifier: "Estimotes")
     let colors = [
@@ -32,12 +29,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     
     @IBOutlet weak var settingBtn: UIButton!
     private var pageControl: UIPageControl!
-    //private var scrollView: UIScrollView!
+    private var scrollView: UIScrollView!
+    private var newsLabel: UILabel!
    // private let major = Configuration.Major()
     //private let minor = Configuration.Minor()
     private let connectFirebase = ConnectFirebase()
     var distance = 0.00
-    var beacons_all : [String] = []
+    var fetched_beacon = [String]()
     //UIViewController.viewの座標取得
     var x:CGFloat = 0.0
     var y:CGFloat = 0.0
@@ -58,57 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         height = self.view.frame.maxY
         
         Peripheral.startAdvertising()
-        // ScrollViewを取得する.
-        //scrollView = UIScrollView(frame: self.view.frame)
-        // ページ数を定義する.
-        let pageSize = 4
-        // 縦方向と、横方向のインディケータを非表示にする.
-        scrollView.showsHorizontalScrollIndicator = false;
-        scrollView.showsVerticalScrollIndicator = false
-        // ページングを許可する.
-        scrollView.pagingEnabled = true
-        // ScrollViewのデリゲートを設定する.
-        scrollView.delegate = self
-        // スクロールの画面サイズを指定する.
-        //scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
-        scrollView.contentSize = CGSizeMake(3000, 2000)
-        // ScrollViewをViewに追加する.
-        //self.view.addSubview(scrollView)
-    
-        // ページ数分ボタンを生成する.
-        for var i = 0; i < pageSize; i++ {
-            // loveLabelを生成する.
-            let loveLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width - 90, height - 80, 60, 30))
-            loveLabel.textColor = UIColor.whiteColor()
-            loveLabel.textAlignment = NSTextAlignment.Center
-            loveLabel.text = "相性: \(i)"
-            loveLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            //scrollView.addSubview(loveLabel)
-            
-            // distanceLabelを生成する.
-            //newsLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
-            newsLabel.textColor = UIColor.whiteColor()
-            newsLabel.textAlignment = NSTextAlignment.Center
-          //  distanceLabel.text = "稲村さんがあなたにいいねを押しました。\(major):\(minor)"
-            newsLabel.text = "稲村さんがあなたにいいねを押しました。"
-            newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            //scrollView.addSubview(newsLabel)
-            
-            
-        }
-        
-        // PageControlを作成する.
-        pageControl = UIPageControl(frame: CGRectMake(0, self.view.frame.maxY - 100, width, 50))
-        
-        // PageControlするページ数を設定する.
-        pageControl.numberOfPages = pageSize
-        
-        // 現在ページを設定する.
-        pageControl.currentPage = 0
-        pageControl.userInteractionEnabled = false
-        
-        self.view.addSubview(pageControl)
-        
+
         setBackgroundColor()
         pulse.layer.superlayer?.insertSublayer(pulsator, below: pulse.layer)
         setupInitialValues()
@@ -159,7 +107,66 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             print("error:Minor")
         }
         
+        
+        
+ 
+        // 背景の色をCyanに設定する.
+        //self.view.backgroundColor = UIColor.cyanColor()
+        // ScrollViewを取得する.
+        scrollView = UIScrollView(frame: self.view.frame)
+        // ページ数を定義する.
+        let pageSize = 4
+        // 縦方向と、横方向のインディケータを非表示にする.
+        scrollView.showsHorizontalScrollIndicator = false;
+        scrollView.showsVerticalScrollIndicator = false
+        // ページングを許可する.
+        scrollView.pagingEnabled = true
+        // ScrollViewのデリゲートを設定する.
+        scrollView.delegate = self
+        // スクロールの画面サイズを指定する.
+        scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
+        // ScrollViewをViewに追加する.
+        self.view.addSubview(scrollView)
+        
+        // ページ数分ボタンを生成する.
+        for var i = 0; i < pageSize; i++ {
+            // ページごとに異なるラベルを生成する.
+            let myLabel:UILabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 40, height/2 - 40, 80, 80))
+            myLabel.backgroundColor = UIColor.blackColor()
+            myLabel.textColor = UIColor.whiteColor()
+            myLabel.textAlignment = NSTextAlignment.Center
+            myLabel.layer.masksToBounds = true
+            myLabel.text = "Page\(i)"
+            myLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+            myLabel.layer.cornerRadius = 40.0
+            scrollView.addSubview(myLabel)
+            
+            newsLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
+            newsLabel.textColor = UIColor.whiteColor()
+            newsLabel.textAlignment = NSTextAlignment.Center
+            newsLabel.text = ""
+            newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+            scrollView.addSubview(newsLabel)
+        }
+        
+        // PageControlを作成する.
+        pageControl = UIPageControl(frame: CGRectMake(0, self.view.frame.maxY - 100, width, 50))
+        //pageControl.backgroundColor = UIColor.orangeColor()
+        
+        // PageControlするページ数を設定する.
+        pageControl.numberOfPages = pageSize
+        
+        // 現在ページを設定する.
+        pageControl.currentPage = 0
+        pageControl.userInteractionEnabled = false
+        
+        self.view.addSubview(pageControl)
+        
     }
+ 
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -178,7 +185,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
         if (knownBeacons.count > 0) {
             let closestBeacon = knownBeacons[0] as CLBeacon
-            self.view.backgroundColor = self.colors[closestBeacon.minor.integerValue % 3]
          // print(beacons)
             self.noFriendLabel.hidden = true
             //self.noFriendLabel.text = "友達発見！\(closestBeacon.major) : \(closestBeacon.minor):  \(closestBeacon.accuracy)"
@@ -188,14 +194,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             }
             distance = closestBeacon.accuracy
             let id = "\(closestBeacon.major)\(closestBeacon.minor)"
-            var twitterId = connectFirebase.read_userID(id)
-            var twitterName = connectFirebase.read_userName(id)
-            var twitterImageUrl = connectFirebase.read_image(id)
-            setImage(twitterImageUrl)
+            let twitterId = connectFirebase.read_userID(id)
+            let twitterName = connectFirebase.read_userName(id)
+            let twitterImageUrl = connectFirebase.read_image(id)
+            
+            if(twitterId != "error" && twitterName != "error" && twitterImageUrl != "error"){
+                print(fetched_beacon)
+                if fetched_beacon.indexOf(twitterId) == nil{
+                    print("unkownID")
+                    fetched_beacon.append(twitterId)
+                    setImage(twitterImageUrl, current_page: pageControl.currentPage, name:twitterName)
+                }else{
+                    print("exsitingID")
+                }
+            }else{
+                print("could not get twitterID")
+            }
             //var purpose = connectFirebase.read_purpose(id)
             //print(twitterId)
            // print(twitterName)
            // print(twitterImageUrl)
+            //print(knownBeacons)
 
         }else{
             self.noFriendLabel.hidden = false
@@ -282,16 +301,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         pulsator.start()
     }
     
-    func setImage(target_url:String){
+    func setImage(target_url:String, current_page:Int, name:String){
         if(target_url != "error"){
             let url = NSURL(string: target_url);
             let imgData: NSData
             do {
                 imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 let img = UIImage(data:imgData)
+                let imgView = UIImageView(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 100, height/2 - 100, 200, 200))
+                imgView.layer.cornerRadius = 5;
+                imgView.clipsToBounds = true;
                 imgView.image = img
-                imgView.frame = CGRectMake(width/2 - 100, height/2 - 100, 200, 200)
-                //self.view.addSubview(imgView)
+                //imgView.frame = CGRectMake(width/2 - 100, height/2 - 100, 200, 200)
+                scrollView.addSubview(imgView)
+                print("set image")
+                newsLabel.text = "\(name)さんがあなたにいいねを押しました。"
             } catch {
                 print("Error: can't create image.")
             }
