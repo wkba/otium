@@ -36,6 +36,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     private let connectFirebase = ConnectFirebase()
     var distance = 0.00
     var fetched_beacon = [String]()
+    var twitterId = "error"
+    var twitterName = "error"
+    var twitterImageUrl = "error"
     //UIViewController.viewの座標取得
     var x:CGFloat = 0.0
     var y:CGFloat = 0.0
@@ -139,14 +142,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             myLabel.text = "Page\(i)"
             myLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
             myLabel.layer.cornerRadius = 40.0
-            scrollView.addSubview(myLabel)
+            //scrollView.addSubview(myLabel)
             
             newsLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
             newsLabel.textColor = UIColor.whiteColor()
             newsLabel.textAlignment = NSTextAlignment.Center
-            newsLabel.text = ""
+            newsLabel.text = "CCC"
             newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            scrollView.addSubview(newsLabel)
+            //scrollView.addSubview(newsLabel)
         }
         
         // PageControlを作成する.
@@ -194,21 +197,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             }
             distance = closestBeacon.accuracy
             let id = "\(closestBeacon.major)\(closestBeacon.minor)"
-            let twitterId = connectFirebase.read_userID(id)
-            let twitterName = connectFirebase.read_userName(id)
-            let twitterImageUrl = connectFirebase.read_image(id)
-            
+            //print("start")
             if(twitterId != "error" && twitterName != "error" && twitterImageUrl != "error"){
-                print(fetched_beacon)
+                //print(fetched_beacon)
                 if fetched_beacon.indexOf(twitterId) == nil{
                     print("unkownID")
                     fetched_beacon.append(twitterId)
                     setImage(twitterImageUrl, current_page: pageControl.currentPage, name:twitterName)
                 }else{
-                    print("exsitingID")
+                    //print("exsitingID")
                 }
             }else{
-                print("could not get twitterID")
+                twitterId = connectFirebase.read_userID(id)
+                twitterName = connectFirebase.read_userName(id)
+                twitterImageUrl = connectFirebase.read_image(id)
+                print("could not get twitterInfo")
             }
             //var purpose = connectFirebase.read_purpose(id)
             //print(twitterId)
@@ -308,17 +311,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             do {
                 imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 let img = UIImage(data:imgData)
-                let imgView = UIImageView(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 100, height/2 - 100, 200, 200))
-                imgView.layer.cornerRadius = 5;
+                let imgView = UIButton(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 100, height/2 - 100, 200, 200))
+                imgView.layer.cornerRadius = 20;
                 imgView.clipsToBounds = true;
-                imgView.image = img
+                imgView.setImage(img, forState: .Normal)
+                //タップした状態の色
+                imgView.setTitleColor(UIColor.redColor(), forState: .Highlighted)
+                
+                imgView.addTarget(self, action: "tappedImage:", forControlEvents:.TouchUpInside)
+
                 //imgView.frame = CGRectMake(width/2 - 100, height/2 - 100, 200, 200)
                 scrollView.addSubview(imgView)
+                
                 print("set image")
+                newsLabel = UILabel(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 130, height - 50, 260, 30))
+                newsLabel.textColor = UIColor.whiteColor()
+                newsLabel.textAlignment = NSTextAlignment.Center
                 newsLabel.text = "\(name)さんがあなたにいいねを押しました。"
+                newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+                scrollView.addSubview(newsLabel)
             } catch {
                 print("Error: can't create image.")
             }
         }
+    }
+    func tappedImage(sender: UIButton) {
+        print("tappedImage")
     }
 }
