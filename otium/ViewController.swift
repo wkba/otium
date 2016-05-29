@@ -160,7 +160,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         self.receiveFirebase = Firebase(url:"https://otium.firebaseio.com/\(myBeaconId)/like_list")
         self.receiveFirebase.observeEventType(.ChildAdded, withBlock: { snapshot in
             if let targetId = snapshot.value.objectForKey("targetId") as? String {
-                print("get いいね")
+                print("get いいね from \(targetId)")
             }else{
                 print("error: ChildAdded")
             }
@@ -170,11 +170,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             if let isNull = snapshot.value as? NSNull {
                 return
             }
-            
             if let targetId = snapshot.value.objectForKey("targetId") as? String {
-                print("observeEventType(.Value,")
+                //print("observeEventType(.Value,")
             }else{
-                print("error: Value")
+                //print("error: Value")
             }
         })
         
@@ -224,7 +223,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                 twitterId = connectFirebase.read_userID(beacon_id)
                 twitterName = connectFirebase.read_userName(beacon_id)
                 twitterImageUrl = connectFirebase.read_image(beacon_id)
-                print("could not get twitterInfo")
+                //print("could not get twitterInfo")
             }
             //var purpose = connectFirebase.read_purpose(id)
             //print(twitterId)
