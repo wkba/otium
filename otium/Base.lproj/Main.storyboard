@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qcE-hM-9cy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -30,37 +30,40 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jk9-8w-Kev">
-                                <rect key="frame" x="20" y="40" width="30" height="30"/>
+                                <rect key="frame" x="20" y="40" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DV4-H4-etq"/>
-                                    <constraint firstAttribute="width" constant="30" id="NQs-Zx-whP"/>
+                                    <constraint firstAttribute="height" constant="40" id="BGZ-Ui-Mdn"/>
+                                    <constraint firstAttribute="width" constant="40" id="HDW-zV-6fX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="set_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNf-j7-eX9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-Z8-Z1K">
-                                <rect key="frame" x="550" y="40" width="30" height="30"/>
+                                <rect key="frame" x="540" y="40" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="s2p-YA-kph"/>
+                                    <constraint firstAttribute="width" constant="40" id="VMR-nu-JcH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2Pn-bi-Xnl"/>
-                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="leading" secondItem="5Re-e3-Ry1" secondAttribute="leading" id="6iq-ra-lsG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Re-e3-Ry1" secondAttribute="bottom" constant="228" id="8Sh-Sl-zch"/>
-                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="trailing" secondItem="5Re-e3-Ry1" secondAttribute="trailing" id="BIa-M0-xEg"/>
-                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="D8T-iw-WFC"/>
-                            <constraint firstItem="5Re-e3-Ry1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mjm-2V-0pS"/>
-                            <constraint firstItem="5Re-e3-Ry1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WSY-6r-dTG"/>
-                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="baseline" secondItem="yhO-Z8-Z1K" secondAttribute="firstBaseline" id="adx-pR-mfJ"/>
-                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="koT-y7-5cN"/>
-                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="m8b-wZ-3rT"/>
-                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="top" secondItem="Jk9-8w-Kev" secondAttribute="top" id="meq-aw-Otf"/>
-                            <constraint firstItem="5Re-e3-Ry1" firstAttribute="centerX" secondItem="4z3-cD-Xmq" secondAttribute="centerX" id="tKr-JU-7ud"/>
-                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uQe-1o-VmL"/>
-                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="baseline" secondItem="Jk9-8w-Kev" secondAttribute="firstBaseline" id="xG8-7B-wGN"/>
+                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="trailing" secondItem="5Re-e3-Ry1" secondAttribute="trailing" id="00Y-ZI-iB8"/>
+                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1GB-Nh-dKA"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="6e3-ei-rul"/>
+                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G8V-cL-ABI"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GDS-YK-oNU"/>
+                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="baseline" secondItem="yhO-Z8-Z1K" secondAttribute="firstBaseline" id="QIA-HG-Hgn"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="S0c-VV-Ywu"/>
+                            <constraint firstItem="4z3-cD-Xmq" firstAttribute="centerX" secondItem="5Re-e3-Ry1" secondAttribute="centerX" id="WGq-bt-VmC"/>
+                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="baseline" secondItem="Jk9-8w-Kev" secondAttribute="firstBaseline" id="aHx-uG-9fZ"/>
+                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bh4-um-vX7"/>
+                            <constraint firstItem="Jk9-8w-Kev" firstAttribute="leading" secondItem="5Re-e3-Ry1" secondAttribute="leading" id="d9h-xC-jXP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Re-e3-Ry1" secondAttribute="bottom" constant="228" id="llO-yf-hul"/>
+                            <constraint firstItem="5Re-e3-Ry1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t6h-cD-8y7"/>
+                            <constraint firstItem="yhO-Z8-Z1K" firstAttribute="top" secondItem="Jk9-8w-Kev" secondAttribute="top" id="zNd-d0-xfE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -73,6 +76,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="375" y="232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zSE-e1-zJp">
+            <objects>
+                <viewController id="IHL-Bw-vk4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="66M-8o-BJG"/>
+                        <viewControllerLayoutGuide type="bottom" id="GFK-9M-3zZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OV7-a4-dXo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCR-z7-yrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="232"/>
         </scene>
         <!--FirstVC-->
         <scene sceneID="clC-R7-QW2">
@@ -111,7 +132,7 @@
         <!--SetVC-->
         <scene sceneID="rEo-Sl-cqc">
             <objects>
-                <viewController id="SWl-FA-UPN" customClass="SetVC" customModule="otium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="setVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SWl-FA-UPN" customClass="SetVC" customModule="otium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="guw-eq-cJD"/>
                         <viewControllerLayoutGuide type="bottom" id="9Ny-90-PyP"/>
@@ -124,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3wP-L9-FDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1307" y="259"/>
+            <point key="canvasLocation" x="-383" y="215"/>
         </scene>
     </scenes>
 </document>

@@ -39,6 +39,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     var twitterId = "error"
     var twitterName = "error"
     var twitterImageUrl = "error"
+    var purpose = "未設定。声をかけて教えてあげよう"
+    var imgView:UIButton!
     //UIViewController.viewの座標取得
     var x:CGFloat = 0.0
     var y:CGFloat = 0.0
@@ -46,9 +48,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     //UIViewController.viewの幅と高さを取得
     var width:CGFloat = 0.0
     var height:CGFloat = 0.0
-
+    var current_page = 0
     
-    
+    @IBAction func bell_btn(sender: AnyObject) {
+        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "bellVC" )
+        self.presentViewController( targetViewController, animated: false, completion: nil)
+    }
+    @IBAction func set_btn(sender: AnyObject) {
+        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "setVC" )
+        self.presentViewController( targetViewController, animated: false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //UIViewController.viewの座標取得
@@ -71,13 +80,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         settingBtn.frame = CGRectMake(20, 40, 45, 45)
         settingBtn.setImage(UIImage(named: "gear.png"), forState: .Normal)
         settingBtn.imageView?.contentMode = .ScaleAspectFit
-        //self.view.addSubview(settingBtn)
+
         
         bellBtn.frame = CGRectMake(myBoundSize.width - 20 - 45, 40, 45, 45)
         bellBtn.setImage(UIImage(named: "bell.png"), forState: .Normal)
         bellBtn.imageView?.contentMode = .ScaleAspectFit
         bellBtn.alpha = 0.6
-        //self.view.addSubview(bellBtn)
 
         
         //MARK: central
@@ -130,7 +138,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
         // ScrollViewをViewに追加する.
         self.view.addSubview(scrollView)
-        
+        self.view.addSubview(settingBtn)
+        self.view.addSubview(bellBtn)
         // ページ数分ボタンを生成する.
         for var i = 0; i < pageSize; i++ {
             // ページごとに異なるラベルを生成する.
@@ -147,7 +156,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             newsLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
             newsLabel.textColor = UIColor.whiteColor()
             newsLabel.textAlignment = NSTextAlignment.Center
-            newsLabel.text = "CCC"
+            newsLabel.text = ""
             newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
             //scrollView.addSubview(newsLabel)
         }
@@ -310,8 +319,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             let imgData: NSData
             do {
                 imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
-                let img = UIImage(data:imgData)
-                let imgView = UIButton(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 100, height/2 - 100, 200, 200))
+                let img = resizeProfileImage(UIImage(data:imgData)!)
+                imgView = UIButton(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 100, height/2 - 100, 200, 200))
                 imgView.layer.cornerRadius = 20;
                 imgView.clipsToBounds = true;
                 imgView.setImage(img, forState: .Normal)
@@ -324,18 +333,66 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                 scrollView.addSubview(imgView)
                 
                 print("set image")
-                newsLabel = UILabel(frame: CGRectMake(CGFloat(current_page) * width + width/2 - 130, height - 50, 260, 30))
-                newsLabel.textColor = UIColor.whiteColor()
-                newsLabel.textAlignment = NSTextAlignment.Center
-                newsLabel.text = "\(name)さんがあなたにいいねを押しました。"
-                newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-                scrollView.addSubview(newsLabel)
             } catch {
                 print("Error: can't create image.")
             }
         }
     }
+    func resizeProfileImage(preImage:UIImage)->UIImage{
+        let size = CGSize(width: 200, height: 200)
+        UIGraphicsBeginImageContext(size)
+        preImage.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizeImage
+    }
+    
     func tappedImage(sender: UIButton) {
-        print("tappedImage")
+        //print("tappedImage")
+        setAlert()
+    }
+    func setAlert(){
+        //UIAlertView
+        let alert:UIAlertController = UIAlertController(title:"\(twitterName)",
+            message: "\(purpose)",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        //Cancel 一つだけしか指定できない
+        let cancelAction:UIAlertAction = UIAlertAction(title: "戻る",
+            style: UIAlertActionStyle.Cancel,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                print("もどる")
+        })
+        
+        //Default 複数指定可
+        let defaultAction:UIAlertAction = UIAlertAction(title: "いいね！",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                print("いいね！")
+                self.connectFirebase.set_like(self.twitterId)
+                self.removeImage()
+        })
+        
+        //Destructive 複数指定可
+        let destructiveAction:UIAlertAction = UIAlertAction(title: "Blockする",
+            style: UIAlertActionStyle.Destructive,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                print("Blockする")
+                self.connectFirebase.set_hate(self.twitterId)
+                self.removeImage()
+        })
+        
+        alert.addAction(defaultAction)
+        alert.addAction(cancelAction)
+        alert.addAction(destructiveAction)
+  
+        //表示。UIAlertControllerはUIViewControllerを継承している。
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func removeImage(){
+        imgView.hidden = true
     }
 }

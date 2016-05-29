@@ -22,10 +22,24 @@ class ConnectFirebase{
     var outCount = "error"
     var comment = "error"
     var purpose = "error"
-    
+    var otium_major = ""
+    var otium_minor = ""
+
 
 
     init(){
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("otium_major")) != nil){
+            //objectsを配列として確定させ、前回の保存内容を格納
+            otium_major = defaults.objectForKey("otium_major")! as! String
+        }else{
+        }
+        if((defaults.objectForKey("otium_minor")) != nil){
+            otium_minor = defaults.objectForKey("otium_minor") as!  String
+        }else{
+        }
+        userURL = Firebase(url:"https://otium.firebaseio.com/\(otium_major)\(otium_minor)")
     }
     
     func save(words:String){
@@ -61,7 +75,14 @@ class ConnectFirebase{
     func set_purpose(purpose:String){
         userURL.childByAppendingPath("purpose").setValue(purpose)
     }
-    
+    func set_like(targetId:String){
+        userURL.childByAppendingPath("like_list").childByAppendingPath(targetId).setValue("true")
+        userURL.childByAppendingPath("hate_list").childByAppendingPath(targetId).setValue("false")
+    }
+    func set_hate(targetId:String){
+        userURL.childByAppendingPath("hate_list").childByAppendingPath(targetId).setValue("true")
+        userURL.childByAppendingPath("like_list").childByAppendingPath(targetId).setValue("false")
+    }
     
     func read_major(id:String) -> String{
         
