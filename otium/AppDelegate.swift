@@ -21,6 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //removed to MainVC
         //Peripheral.startAdvertising()
         Fabric.with([Twitter.self])
+        
+        
+        //ナビゲーションアイテムの色を変更
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        //ナビゲーションバーの背景を変更
+        UINavigationBar.appearance().barTintColor = UIColor.clearColor()
+        //ナビゲーションのタイトル文字列の色を変更
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
         return true
     }
 

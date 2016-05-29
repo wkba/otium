@@ -24,6 +24,7 @@ class ConnectFirebase{
     var purpose = "error"
     var otium_major = ""
     var otium_minor = ""
+    var myId = ""
 
 
 
@@ -39,7 +40,8 @@ class ConnectFirebase{
             otium_minor = defaults.objectForKey("otium_minor") as!  String
         }else{
         }
-        userURL = Firebase(url:"https://otium.firebaseio.com/\(otium_major)\(otium_minor)")
+        self.myId = otium_major + otium_minor
+        userURL = Firebase(url:"https://otium.firebaseio.com/\(myId)")
     }
     
     func save(words:String){
@@ -76,12 +78,10 @@ class ConnectFirebase{
         userURL.childByAppendingPath("purpose").setValue(purpose)
     }
     func set_like(targetId:String){
-        userURL.childByAppendingPath("like_list").childByAppendingPath(targetId).setValue("true")
-        userURL.childByAppendingPath("hate_list").childByAppendingPath(targetId).setValue("false")
+        targetURL.childByAppendingPath(targetId).childByAppendingPath("like_list").childByAutoId().childByAppendingPath("targetId").setValue(myId)
     }
     func set_hate(targetId:String){
-        userURL.childByAppendingPath("hate_list").childByAppendingPath(targetId).setValue("true")
-        userURL.childByAppendingPath("like_list").childByAppendingPath(targetId).setValue("false")
+        targetURL.childByAppendingPath(targetId).childByAppendingPath("hate_list").childByAutoId().childByAppendingPath("targetId").setValue(myId)
     }
     
     func read_major(id:String) -> String{
@@ -133,6 +133,26 @@ class ConnectFirebase{
             self.purpose = "\(snapshot.value)"
         })
         return purpose
+    }
+    
+    
+    func receivedLike(){
+        // Child追加時のイベントハンドラ
+        userURL.childByAppendingPath("like_list").observeEventType(.ChildAdded, withBlock: { snapshot in
+            if let targetId = snapshot.value.objectForKey("targetId") as? String {
+                print("observeEventType(.ChildAdded")
+            }
+        })
+        // 接続直後に呼び出されるイベントハンドラ
+        userURL.childByAppendingPath("like_list").observeEventType(.Value, withBlock: { snapshot in
+            if let isNull = snapshot.value as? NSNull {
+                return
+            }
+            
+            if let targetId = snapshot.value.objectForKey("targetId") as? String {
+                print("observeEventType(.Value,")
+            }
+        })
     }
     
 }

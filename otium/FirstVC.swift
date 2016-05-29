@@ -103,7 +103,7 @@ class FirstVC: UIViewController {
     }
     
     func goMainVC(){
-        let MainViewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
+        let MainViewController: UINavigationController = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! UINavigationController
         // アニメーションを設定する.
         //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
         // 値渡ししたい時 hoge -> piyo

@@ -9,13 +9,13 @@
 import UIKit
 import CoreLocation
 import Pulsator
-
+import Firebase
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
 
-    @IBOutlet weak var bellBtn: UIButton!
     @IBOutlet weak var noFriendLabel: UILabel!
     @IBOutlet weak var pulse: UIView!
+    var receiveFirebase: Firebase!
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: Configuration.UUID())!, identifier: "Estimotes")
     let colors = [
@@ -27,7 +27,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     let pulsator = Pulsator()
     let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
     
-    @IBOutlet weak var settingBtn: UIButton!
     private var pageControl: UIPageControl!
     private var scrollView: UIScrollView!
     private var newsLabel: UILabel!
@@ -40,7 +39,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     var twitterName = "error"
     var twitterImageUrl = "error"
     var purpose = "未設定。声をかけて教えてあげよう"
+    var beacon_id = ""
     var imgView:UIButton!
+    var myBeaconId = ""
     //UIViewController.viewの座標取得
     var x:CGFloat = 0.0
     var y:CGFloat = 0.0
@@ -50,14 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     var height:CGFloat = 0.0
     var current_page = 0
     
-    @IBAction func bell_btn(sender: AnyObject) {
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "bellVC" )
-        self.presentViewController( targetViewController, animated: false, completion: nil)
-    }
-    @IBAction func set_btn(sender: AnyObject) {
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "setVC" )
-        self.presentViewController( targetViewController, animated: false, completion: nil)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //UIViewController.viewの座標取得
@@ -77,17 +71,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         
         
 
-        settingBtn.frame = CGRectMake(20, 40, 45, 45)
-        settingBtn.setImage(UIImage(named: "gear.png"), forState: .Normal)
-        settingBtn.imageView?.contentMode = .ScaleAspectFit
-
-        
-        bellBtn.frame = CGRectMake(myBoundSize.width - 20 - 45, 40, 45, 45)
-        bellBtn.setImage(UIImage(named: "bell.png"), forState: .Normal)
-        bellBtn.imageView?.contentMode = .ScaleAspectFit
-        bellBtn.alpha = 0.6
-
-        
         //MARK: central
         locationManager.delegate = self
         if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {
@@ -102,9 +85,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
 
         let defaults = NSUserDefaults.standardUserDefaults()
         //前回の保存内容があるかどうかを判定
+        var otium_major = ""
+        var otium_minor = ""
         if((defaults.objectForKey("otium_major")) != nil){
             //objectsを配列として確定させ、前回の保存内容を格納
-            let otium_major = defaults.objectForKey("otium_major")!
+            otium_major = defaults.objectForKey("otium_major")! as! String
             print("Major:\(otium_major)")
         }else{
             print("error:Major")
@@ -112,12 +97,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         //前回の保存内容があるかどうかを判定
         if((defaults.objectForKey("otium_minor")) != nil){
             //objectsを配列として確定させ、前回の保存内容を格納
-            let otium_minor = defaults.objectForKey("otium_minor")!
+            otium_minor = defaults.objectForKey("otium_minor")! as! String
             print("Major:\(otium_minor)")
         }else{
             print("error:Minor")
         }
-        
+        myBeaconId = otium_major + otium_minor
         
         
  
@@ -138,8 +123,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         scrollView.contentSize = CGSizeMake(CGFloat(pageSize) * width, 0)
         // ScrollViewをViewに追加する.
         self.view.addSubview(scrollView)
-        self.view.addSubview(settingBtn)
-        self.view.addSubview(bellBtn)
         // ページ数分ボタンを生成する.
         for var i = 0; i < pageSize; i++ {
             // ページごとに異なるラベルを生成する.
@@ -173,6 +156,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         pageControl.userInteractionEnabled = false
         
         self.view.addSubview(pageControl)
+        //connectFirebase.receivedLike()
+        self.receiveFirebase = Firebase(url:"https://otium.firebaseio.com/\(myBeaconId)/like_list")
+        self.receiveFirebase.observeEventType(.ChildAdded, withBlock: { snapshot in
+            if let targetId = snapshot.value.objectForKey("targetId") as? String {
+                print("get いいね")
+            }else{
+                print("error: ChildAdded")
+            }
+        })
+        // 接続直後に呼び出されるイベントハンドラ
+        self.receiveFirebase.observeEventType(.Value, withBlock: { snapshot in
+            if let isNull = snapshot.value as? NSNull {
+                return
+            }
+            
+            if let targetId = snapshot.value.objectForKey("targetId") as? String {
+                print("observeEventType(.Value,")
+            }else{
+                print("error: Value")
+            }
+        })
         
     }
  
@@ -205,7 +209,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                 print("MianVC: changed パルス")
             }
             distance = closestBeacon.accuracy
-            let id = "\(closestBeacon.major)\(closestBeacon.minor)"
+            beacon_id = "\(closestBeacon.major)\(closestBeacon.minor)"
             //print("start")
             if(twitterId != "error" && twitterName != "error" && twitterImageUrl != "error"){
                 //print(fetched_beacon)
@@ -217,9 +221,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                     //print("exsitingID")
                 }
             }else{
-                twitterId = connectFirebase.read_userID(id)
-                twitterName = connectFirebase.read_userName(id)
-                twitterImageUrl = connectFirebase.read_image(id)
+                twitterId = connectFirebase.read_userID(beacon_id)
+                twitterName = connectFirebase.read_userName(beacon_id)
+                twitterImageUrl = connectFirebase.read_image(beacon_id)
                 print("could not get twitterInfo")
             }
             //var purpose = connectFirebase.read_purpose(id)
@@ -370,8 +374,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             handler:{
                 (action:UIAlertAction!) -> Void in
                 print("いいね！")
-                self.connectFirebase.set_like(self.twitterId)
-                self.removeImage()
+                self.connectFirebase.set_like(self.beacon_id)
+                //self.removeImage()
         })
         
         //Destructive 複数指定可
@@ -380,8 +384,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             handler:{
                 (action:UIAlertAction!) -> Void in
                 print("Blockする")
-                self.connectFirebase.set_hate(self.twitterId)
-                self.removeImage()
+                self.connectFirebase.set_hate(self.beacon_id)
+                //self.removeImage()
         })
         
         alert.addAction(defaultAction)
