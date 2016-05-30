@@ -11,49 +11,57 @@
 import UIKit
 
 
-class NotificationVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // セルに表示するテキスト
-    let items = []
-    
-
     @IBOutlet weak var tableView: UITableView!
+    /// 画像のファイル名
+    let imageNames = ["cat1.jpg", "cat2.jpg", "dog1.jpg", "dog2.jpg"]
+    
+    /// 画像のタイトル
+    let imageTitles = ["ネコ1", "ネコ2", "イヌ1", "イヌ2"]
+    
+    /// 画像の説明
+    let imageDescriptions = [
+        "ボックスから顔だけだして下を見ているオス猫",
+        "寝ころびながらじゃれる猫",
+        "散歩中のポメラニアン",
+        "お散歩中のワンちゃん"
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.registerClass(CustomTableViewCell.self, forCellReuseIdentifier: "customCell")
- 
+        
         setBackgroundColor()
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("select cell #\(indexPath.row)")
+    }
+
+    /// セルの個数を指定するデリゲートメソッド（必須）
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return imageNames.count
+    }
+    
+    /// セルに値を設定するデータソースメソッド（必須）
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // セルを取得
+        let cell = tableView.dequeueReusableCellWithIdentifier("MyCell") as! CustomTableViewCell
+        cell.backgroundColor = UIColor.clearColor()
+
+        // セルに値を設定
+        cell.setCell(imageNames[indexPath.row], titleText: imageTitles[indexPath.row], descriptionText: imageDescriptions[indexPath.row])
+        
+        return cell
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // セルの行数
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    // セルの内容を変更
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        let cell = tableView.dequeueReusableCellWithIdentifier("customCell", forIndexPath: indexPath) as! CustomTableViewCell
-        
-        cell.titleLabel.text = self.items[indexPath.row] as! String
-        cell.contentLabel.text = "test date";
-        cell.backgroundColor = UIColor.clearColor()
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        return cell
-    }
-    
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("select cell #\(indexPath.row)")
-    }
 
     // setBackgroundColor
     func setBackgroundColor(){

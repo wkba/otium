@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="urJ-zc-IV4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qcE-hM-9cy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -89,29 +89,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-FB-Zan">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-FB-Zan">
                                 <rect key="frame" x="22" y="72" width="556" height="508"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="120" id="JfA-p6-gDo" customClass="CustomTableViewCell" customModule="otium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="556" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JfA-p6-gDo" id="eHe-ed-N5a">
+                                            <rect key="frame" x="0.0" y="0.0" width="556" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="T1N-UI-yDs">
+                                                    <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a5-nX-116">
+                                                    <rect key="frame" x="130" y="71" width="310" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TI6-pz-jkO">
+                                                    <rect key="frame" x="130" y="10" width="195" height="53"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myDescriptionLabel" destination="2a5-nX-116" id="JfN-KC-2p7"/>
+                                            <outlet property="myImageView" destination="T1N-UI-yDs" id="tCZ-0K-6go"/>
+                                            <outlet property="myTitleLabel" destination="TI6-pz-jkO" id="USf-RN-BGG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="IHL-Bw-vk4" id="cFN-cR-wHq"/>
-                                    <outlet property="delegate" destination="IHL-Bw-vk4" id="Pmc-h7-cWX"/>
+                                    <outlet property="dataSource" destination="IHL-Bw-vk4" id="IDc-Jv-cjw"/>
+                                    <outlet property="delegate" destination="IHL-Bw-vk4" id="EPp-pE-DR1"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vgf-FB-Zan" firstAttribute="top" secondItem="66M-8o-BJG" secondAttribute="bottom" constant="8" symbolic="YES" id="0Hg-je-Nhe"/>
-                            <constraint firstItem="vgf-FB-Zan" firstAttribute="leading" secondItem="OV7-a4-dXo" secondAttribute="leadingMargin" constant="2" id="5jt-hr-iJg"/>
-                            <constraint firstItem="vgf-FB-Zan" firstAttribute="centerX" secondItem="OV7-a4-dXo" secondAttribute="centerX" id="MJO-q9-DKD"/>
-                            <constraint firstAttribute="bottom" secondItem="vgf-FB-Zan" secondAttribute="bottom" constant="20" symbolic="YES" id="NSl-nI-INH"/>
+                            <constraint firstItem="vgf-FB-Zan" firstAttribute="top" secondItem="66M-8o-BJG" secondAttribute="bottom" constant="8" symbolic="YES" id="ILC-rE-2FC"/>
+                            <constraint firstItem="vgf-FB-Zan" firstAttribute="centerX" secondItem="OV7-a4-dXo" secondAttribute="centerX" id="bap-P6-zJK"/>
+                            <constraint firstItem="vgf-FB-Zan" firstAttribute="leading" secondItem="OV7-a4-dXo" secondAttribute="leadingMargin" constant="2" id="t9b-by-4ML"/>
+                            <constraint firstAttribute="bottom" secondItem="vgf-FB-Zan" secondAttribute="bottom" constant="20" symbolic="YES" id="yRX-VI-XGp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="波長が合った人" id="hAr-Ne-gU4"/>
                     <connections>
-                        <outlet property="tableView" destination="vgf-FB-Zan" id="eKm-6c-zkH"/>
+                        <outlet property="tableView" destination="vgf-FB-Zan" id="Dam-61-leF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCR-z7-yrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +206,7 @@
     </scenes>
     <resources>
         <image name="bell.png" width="23" height="23"/>
+        <image name="cat1.jpg" width="1600" height="1066"/>
         <image name="gear.png" width="23" height="23"/>
     </resources>
 </document>

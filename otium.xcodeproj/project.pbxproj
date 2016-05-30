@@ -11,11 +11,15 @@
 		1D32722A7CF0D7A533DEA10F /* Pods_otium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FA4CA05AAE4E1696063BE8 /* Pods_otium.framework */; };
 		3D1D53E51CC698D9008EBDEF /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D53E41CC698D9008EBDEF /* gear.png */; };
 		3D1D53EB1CC69B79008EBDEF /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D53EA1CC69B79008EBDEF /* question.png */; };
+		3D287D061CFC22B100AD8991 /* cat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D287D021CFC22B100AD8991 /* cat1.jpg */; };
+		3D287D071CFC22B100AD8991 /* dog1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D287D031CFC22B100AD8991 /* dog1.jpg */; };
+		3D287D081CFC22B100AD8991 /* cat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D287D041CFC22B100AD8991 /* cat2.jpg */; };
+		3D287D091CFC22B100AD8991 /* dog2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D287D051CFC22B100AD8991 /* dog2.jpg */; };
+		3D287D0B1CFC233700AD8991 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D287D0A1CFC233700AD8991 /* CustomTableViewCell.swift */; };
 		3D28FD431CF42D5600C03F03 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D28FD421CF42D5600C03F03 /* bell.png */; };
 		3D2B18511CF3760000923E3C /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B18501CF3760000923E3C /* FirstVC.swift */; };
 		3D7A5FDC1CFB261D00A38563 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7A5FDB1CFB261D00A38563 /* home.png */; };
 		3D8624ED1CF9F8F000998AE9 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8624EC1CF9F8F000998AE9 /* NotificationVC.swift */; };
-		3DA73FE71CFB6D68000AF25B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA73FE61CFB6D68000AF25B /* CustomTableViewCell.swift */; };
 		3DB6F1101CF2F01000D3F0FF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB6F10F1CF2F01000D3F0FF /* CoreBluetooth.framework */; };
 		3DB6F1121CF3674A00D3F0FF /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6F1111CF3674A00D3F0FF /* SetVC.swift */; };
 		3DD3C4651CF592550007C2EF /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD3C4641CF592550007C2EF /* Eureka.framework */; };
@@ -65,11 +69,15 @@
 		31FA4CA05AAE4E1696063BE8 /* Pods_otium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1D53E41CC698D9008EBDEF /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		3D1D53EA1CC69B79008EBDEF /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		3D287D021CFC22B100AD8991 /* cat1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat1.jpg; sourceTree = "<group>"; };
+		3D287D031CFC22B100AD8991 /* dog1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog1.jpg; sourceTree = "<group>"; };
+		3D287D041CFC22B100AD8991 /* cat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat2.jpg; sourceTree = "<group>"; };
+		3D287D051CFC22B100AD8991 /* dog2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog2.jpg; sourceTree = "<group>"; };
+		3D287D0A1CFC233700AD8991 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3D28FD421CF42D5600C03F03 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
 		3D2B18501CF3760000923E3C /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		3D7A5FDB1CFB261D00A38563 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3D8624EC1CF9F8F000998AE9 /* NotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
-		3DA73FE61CFB6D68000AF25B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3DB6F10F1CF2F01000D3F0FF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3DB6F1111CF3674A00D3F0FF /* SetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
 		3DD3C4641CF592550007C2EF /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Debug-iphoneos/Eureka/Eureka.framework"; sourceTree = "<group>"; };
@@ -201,12 +209,12 @@
 				3DFB061D1CC9322500D96693 /* image */,
 				3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */,
 				3D8624EC1CF9F8F000998AE9 /* NotificationVC.swift */,
-				3DA73FE61CFB6D68000AF25B /* CustomTableViewCell.swift */,
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
 				3DFB06161CC91FB900D96693 /* Screen.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
 				3DB6F1111CF3674A00D3F0FF /* SetVC.swift */,
 				3DFA11FB1CC3AA9100A48515 /* Main.storyboard */,
+				3D287D0A1CFC233700AD8991 /* CustomTableViewCell.swift */,
 				3D2B18501CF3760000923E3C /* FirstVC.swift */,
 				3DFA11FE1CC3AA9100A48515 /* Assets.xcassets */,
 				3DFA12001CC3AA9100A48515 /* LaunchScreen.storyboard */,
@@ -238,6 +246,10 @@
 			children = (
 				3D28FD421CF42D5600C03F03 /* bell.png */,
 				3D7A5FDB1CFB261D00A38563 /* home.png */,
+				3D287D021CFC22B100AD8991 /* cat1.jpg */,
+				3D287D031CFC22B100AD8991 /* dog1.jpg */,
+				3D287D041CFC22B100AD8991 /* cat2.jpg */,
+				3D287D051CFC22B100AD8991 /* dog2.jpg */,
 				3DE35E6A1CC9470F006C9765 /* logo.png */,
 				3DE35E681CC9468F006C9765 /* back.png */,
 				3D1D53E41CC698D9008EBDEF /* gear.png */,
@@ -387,10 +399,14 @@
 				3D28FD431CF42D5600C03F03 /* bell.png in Resources */,
 				3DFA12021CC3AA9100A48515 /* LaunchScreen.storyboard in Resources */,
 				3DFA11FF1CC3AA9100A48515 /* Assets.xcassets in Resources */,
+				3D287D081CFC22B100AD8991 /* cat2.jpg in Resources */,
 				3DE35E6B1CC9470F006C9765 /* logo.png in Resources */,
 				3D7A5FDC1CFB261D00A38563 /* home.png in Resources */,
 				3DE35E691CC9468F006C9765 /* back.png in Resources */,
+				3D287D091CFC22B100AD8991 /* dog2.jpg in Resources */,
+				3D287D061CFC22B100AD8991 /* cat1.jpg in Resources */,
 				3D1D53E51CC698D9008EBDEF /* gear.png in Resources */,
+				3D287D071CFC22B100AD8991 /* dog1.jpg in Resources */,
 				3DFA11FD1CC3AA9100A48515 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +570,7 @@
 			files = (
 				3D2B18511CF3760000923E3C /* FirstVC.swift in Sources */,
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
-				3DA73FE71CFB6D68000AF25B /* CustomTableViewCell.swift in Sources */,
+				3D287D0B1CFC233700AD8991 /* CustomTableViewCell.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
 				3DFB061B1CC9311200D96693 /* ConnectFirebase.swift in Sources */,
 				3DB6F1121CF3674A00D3F0FF /* SetVC.swift in Sources */,
