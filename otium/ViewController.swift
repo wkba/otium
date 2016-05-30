@@ -375,7 +375,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                 (action:UIAlertAction!) -> Void in
                 print("いいね！")
                 self.connectFirebase.set_like(self.beacon_id)
-                //self.removeImage()
+                self.removeImage()
         })
         
         //Destructive 複数指定可
@@ -385,7 +385,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                 (action:UIAlertAction!) -> Void in
                 print("Blockする")
                 self.connectFirebase.set_hate(self.beacon_id)
-                //self.removeImage()
+                self.removeImage()
         })
         
         alert.addAction(defaultAction)

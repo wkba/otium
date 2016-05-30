@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftyJSON
 
 class ConnectFirebase{
 
@@ -25,6 +26,7 @@ class ConnectFirebase{
     var otium_major = ""
     var otium_minor = ""
     var myId = ""
+    var likeUser = "error"
 
 
 
@@ -42,6 +44,7 @@ class ConnectFirebase{
         }
         self.myId = otium_major + otium_minor
         userURL = Firebase(url:"https://otium.firebaseio.com/\(myId)")
+        print(userURL)
     }
     
     func save(words:String){
@@ -64,6 +67,9 @@ class ConnectFirebase{
     }
     func set_userName(name:String){
         userURL.childByAppendingPath("userName").setValue(name)
+    }
+    func set_twitterName(name:String){
+        userURL.childByAppendingPath("twitterName").setValue(name)
     }
     func set_image(image_url:String){
         userURL.childByAppendingPath("image").setValue(image_url)
@@ -139,20 +145,24 @@ class ConnectFirebase{
     func receivedLike(){
         // Child追加時のイベントハンドラ
         userURL.childByAppendingPath("like_list").observeEventType(.ChildAdded, withBlock: { snapshot in
-            if let targetId = snapshot.value.objectForKey("targetId") as? String {
+            if let _ = snapshot.value.objectForKey("targetId") as? String {
                 print("observeEventType(.ChildAdded")
             }
         })
         // 接続直後に呼び出されるイベントハンドラ
         userURL.childByAppendingPath("like_list").observeEventType(.Value, withBlock: { snapshot in
-            if let isNull = snapshot.value as? NSNull {
+            if let _ = snapshot.value as? NSNull {
                 return
             }
             
-            if let targetId = snapshot.value.objectForKey("targetId") as? String {
+            if let _ = snapshot.value.objectForKey("targetId") as? String {
                 print("observeEventType(.Value,")
             }
         })
     }
+    func returnUserURL()->String{
+        return String(userURL)
+    }
+    
     
 }

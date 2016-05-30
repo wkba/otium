@@ -94,6 +94,7 @@ class FirstVC: UIViewController {
                 //print(fixed_json)
                 self.connectFirebase.set_userID(fixed_json["id_str"].string!)
                 self.connectFirebase.set_userName(fixed_json["name"].string!)
+                self.connectFirebase.set_twitterName(fixed_json["screen_name"].string!)
                 self.connectFirebase.set_image(fixed_json["profile_image_url"].string!)
                 
             } catch let jsonError as NSError {

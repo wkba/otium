@@ -7,17 +7,22 @@
 //
 import UIKit
 import Eureka
+import Firebase
 
 
 class SetVC: FormViewController {
     
+    private let connectFirebase = ConnectFirebase()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    
         form +++ Section()
             <<< TextRow("Name"){
                 $0.title = "名前を入力"
-                $0.placeholder = "ここに書いてね"
+                $0.placeholder = "JohnLennonWars"
                 }.onChange{row in
                     
                     let userDefault = NSUserDefaults.standardUserDefaults()
@@ -32,28 +37,17 @@ class SetVC: FormViewController {
                     let userDefault = NSUserDefaults.standardUserDefaults()
                     userDefault.setValue(row.value, forKey: "Sex")
         }
+        form +++ Section()
+            <<< TextRow("TextFiled"){
+                $0.title = "目的"
+                $0.placeholder = "歌を歌いたい"
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    // setBackgroundColor
-    func setBackgroundColor(){
-        //グラデーションの開始色
-        let topColor = UIColor(red:255/255, green:94/255, blue:3/94, alpha:1)
-        //グラデーションの開始色
-        let bottomColor = UIColor(red:255/255, green:42/255, blue:104/255, alpha:1)
-        //グラデーションの色を配列で管理
-        let gradientColors: [CGColor] = [topColor.CGColor, bottomColor.CGColor]
-        //グラデーションレイヤーを作成
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-        //グラデーションの色をレイヤーに割り当てる
-        gradientLayer.colors = gradientColors
-        //グラデーションレイヤーをスクリーンサイズにする
-        gradientLayer.frame = self.view.bounds
-        //グラデーションレイヤーをビューの一番下に配置
-        self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
-    }
+   
     
 }
