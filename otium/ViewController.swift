@@ -69,7 +69,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         pulsator.start()
         //animetion()
         
-        
+        newsLabel = UILabel(frame: CGRectMake(width/2 - 130, height - 50, 260, 30))
+        newsLabel.textColor = UIColor.whiteColor()
+        newsLabel.textAlignment = NSTextAlignment.Center
+        newsLabel.text = ""
+        newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
+        self.view.addSubview(newsLabel)
 
         //MARK: central
         locationManager.delegate = self
@@ -136,12 +141,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             myLabel.layer.cornerRadius = 40.0
             //scrollView.addSubview(myLabel)
             
-            newsLabel = UILabel(frame: CGRectMake(CGFloat(i) * width + width/2 - 130, height - 50, 260, 30))
-            newsLabel.textColor = UIColor.whiteColor()
-            newsLabel.textAlignment = NSTextAlignment.Center
-            newsLabel.text = ""
-            newsLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
-            //scrollView.addSubview(newsLabel)
         }
         
         // PageControlを作成する.
@@ -161,6 +160,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         self.receiveFirebase.observeEventType(.ChildAdded, withBlock: { snapshot in
             if let targetId = snapshot.value.objectForKey("targetId") as? String {
                 print("get いいね from \(targetId)")
+                self.newsLabel.text = "あなたにいいねが押されました。"
             }else{
                 print("error: ChildAdded")
             }
@@ -299,6 +299,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         
         // スクロール数が1ページ分になったら時.
         if fmod(scrollView.contentOffset.x, scrollView.frame.maxX) == 0 {
+            self.newsLabel.text = ""
             // ページの場所を切り替える.
             pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.maxX)
         }

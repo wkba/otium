@@ -15,6 +15,7 @@
 		3D2B18511CF3760000923E3C /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B18501CF3760000923E3C /* FirstVC.swift */; };
 		3D7A5FDC1CFB261D00A38563 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7A5FDB1CFB261D00A38563 /* home.png */; };
 		3D8624ED1CF9F8F000998AE9 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8624EC1CF9F8F000998AE9 /* NotificationVC.swift */; };
+		3DA73FE71CFB6D68000AF25B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA73FE61CFB6D68000AF25B /* CustomTableViewCell.swift */; };
 		3DB6F1101CF2F01000D3F0FF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB6F10F1CF2F01000D3F0FF /* CoreBluetooth.framework */; };
 		3DB6F1121CF3674A00D3F0FF /* SetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6F1111CF3674A00D3F0FF /* SetVC.swift */; };
 		3DD3C4651CF592550007C2EF /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD3C4641CF592550007C2EF /* Eureka.framework */; };
@@ -68,6 +69,7 @@
 		3D2B18501CF3760000923E3C /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		3D7A5FDB1CFB261D00A38563 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3D8624EC1CF9F8F000998AE9 /* NotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		3DA73FE61CFB6D68000AF25B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3DB6F10F1CF2F01000D3F0FF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3DB6F1111CF3674A00D3F0FF /* SetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetVC.swift; sourceTree = "<group>"; };
 		3DD3C4641CF592550007C2EF /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Debug-iphoneos/Eureka/Eureka.framework"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				3DFB061D1CC9322500D96693 /* image */,
 				3DFA11F71CC3AA9100A48515 /* AppDelegate.swift */,
 				3D8624EC1CF9F8F000998AE9 /* NotificationVC.swift */,
+				3DA73FE61CFB6D68000AF25B /* CustomTableViewCell.swift */,
 				3DFA11F91CC3AA9100A48515 /* ViewController.swift */,
 				3DFB06161CC91FB900D96693 /* Screen.swift */,
 				3DFA12271CC3AC5C00A48515 /* Peripheral.swift */,
@@ -551,6 +554,7 @@
 			files = (
 				3D2B18511CF3760000923E3C /* FirstVC.swift in Sources */,
 				3DFA11FA1CC3AA9100A48515 /* ViewController.swift in Sources */,
+				3DA73FE71CFB6D68000AF25B /* CustomTableViewCell.swift in Sources */,
 				3DFA11F81CC3AA9100A48515 /* AppDelegate.swift in Sources */,
 				3DFB061B1CC9311200D96693 /* ConnectFirebase.swift in Sources */,
 				3DB6F1121CF3674A00D3F0FF /* SetVC.swift in Sources */,

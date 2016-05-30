@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qcE-hM-9cy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="urJ-zc-IV4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="753" y="269"/>
         </scene>
-        <!--They like you!!-->
+        <!--波長が合った人-->
         <scene sceneID="zSE-e1-zJp">
             <objects>
                 <viewController id="IHL-Bw-vk4" customClass="NotificationVC" customModule="otium" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,9 +88,31 @@
                     <view key="view" contentMode="scaleToFill" id="OV7-a4-dXo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-FB-Zan">
+                                <rect key="frame" x="22" y="72" width="556" height="508"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IHL-Bw-vk4" id="cFN-cR-wHq"/>
+                                    <outlet property="delegate" destination="IHL-Bw-vk4" id="Pmc-h7-cWX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vgf-FB-Zan" firstAttribute="top" secondItem="66M-8o-BJG" secondAttribute="bottom" constant="8" symbolic="YES" id="0Hg-je-Nhe"/>
+                            <constraint firstItem="vgf-FB-Zan" firstAttribute="leading" secondItem="OV7-a4-dXo" secondAttribute="leadingMargin" constant="2" id="5jt-hr-iJg"/>
+                            <constraint firstItem="vgf-FB-Zan" firstAttribute="centerX" secondItem="OV7-a4-dXo" secondAttribute="centerX" id="MJO-q9-DKD"/>
+                            <constraint firstAttribute="bottom" secondItem="vgf-FB-Zan" secondAttribute="bottom" constant="20" symbolic="YES" id="NSl-nI-INH"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="They like you!!" id="hAr-Ne-gU4"/>
+                    <navigationItem key="navigationItem" title="波長が合った人" id="hAr-Ne-gU4"/>
+                    <connections>
+                        <outlet property="tableView" destination="vgf-FB-Zan" id="eKm-6c-zkH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCR-z7-yrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KB7-W8-PZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501" y="948"/>
+            <point key="canvasLocation" x="753" y="1108"/>
         </scene>
         <!--設定-->
         <scene sceneID="rEo-Sl-cqc">
