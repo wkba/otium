@@ -29,11 +29,12 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         "test3",
         "test4"
     ]
+    var myInfo:[String] = []
+    var likeIds:[String] = []
     private let connectFirebase = ConnectFirebase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         // 編集中のセル選択を許可.
@@ -47,41 +48,43 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         /// 説明
         imageDescriptions = [
         ]
-
-        
-        var likeUserId = "non"
-        
-        //ToDo ワカバヤシ　遅延評価
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
         var userURL = connectFirebase.returnUserURL()
         Firebase(url: userURL).childByAppendingPath("like_list").observeEventType(.ChildAdded, withBlock: { snapshot in
             if let name = snapshot.value.objectForKey("targetId") as? String {
-                print( "now" )
-                let delay = 0.1 * Double(NSEC_PER_SEC)
-                var time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                dispatch_after(time, dispatch_get_main_queue(), {
-                    print( "0.1s後" )
-                    likeUserId = "\(name)"
-                    print(likeUserId)
-                    self.imageUrl.append("https://pbs.twimg.com/profile_images/721704165613830145/FZxf-yyF_400x400.jpg")
-                    self.imageTitles.append("わかばやし～")
-                    self.imageDescriptions.append("数学を教えてください。")
-                    self.tableView.reloadData()
-                })
+                self.imageUrl.append(myApp.imageUrl[0])
+                self.imageTitles.append(myApp.imageTitles[0])
+                self.imageDescriptions.append(myApp.imageDescriptions[0])
+                self.tableView.reloadData()
             }else{
                 print("error!!!!!")
             }
-        })        
+        })
+
         setBackgroundColor()
     }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
+//    override func viewWillAppear(animated: Bool){
+//        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+//        print(myApp.imageUrl)
+//        var userURL = connectFirebase.returnUserURL()
+//        Firebase(url: userURL).childByAppendingPath("like_list").observeEventType(.ChildAdded, withBlock: { snapshot in
+//            if let name = snapshot.value.objectForKey("targetId") as? String {
+//                self.imageUrl.append(myApp.imageUrl[0])
+//                self.imageTitles.append(myApp.imageTitles[0])
+//                self.imageDescriptions.append(myApp.imageDescriptions[0])
+//                self.tableView.reloadData()
+//            }else{
+//                print("error!!!!!")
+//            }
+//        })
+//    }
+
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("select cell #\(indexPath.row)")
         // URLを指定
-        let _url:NSURL = NSURL(string:"https://twitter.com/wakabbbaa/")!
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        let _url:NSURL = NSURL(string:"https://twitter.com/\(myApp.twitterScreenNames[0])")!
         let _brow = SFSafariViewController(URL: _url, entersReaderIfAvailable: true)
         presentViewController(_brow, animated: true, completion: nil)
     }
@@ -151,6 +154,10 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
     
-
+    func fetchMyInfo(){
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        self.myInfo = myApp.myInfo
+        self.likeIds = myApp.likeIds
+    }
 }
 

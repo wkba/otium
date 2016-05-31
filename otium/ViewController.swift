@@ -37,11 +37,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     var fetched_beacon = [String]()
     var twitterId = "error"
     var twitterName = "error"
+    var twitterScreenName = "error"
     var twitterImageUrl = "error"
-    var purpose = "未設定。声をかけて教えてあげよう"
+    var purpose = "未設定"
     var beacon_id = ""
     var imgView:UIButton!
     var myBeaconId = ""
+    var targeName = ""
     //UIViewController.viewの座標取得
     var x:CGFloat = 0.0
     var y:CGFloat = 0.0
@@ -160,7 +162,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
         self.receiveFirebase.observeEventType(.ChildAdded, withBlock: { snapshot in
             if let targetId = snapshot.value.objectForKey("targetId") as? String {
                 print("get いいね from \(targetId)")
-                self.newsLabel.text = "あなたにいいねが押されました。"
+                self.newsLabel.text = "あなたにいいねを押しました。"
             }else{
                 print("error: ChildAdded")
             }
@@ -216,13 +218,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
                     print("unkownID")
                     fetched_beacon.append(twitterId)
                     setImage(twitterImageUrl, current_page: pageControl.currentPage, name:twitterName)
+                    self.saveMyApp(twitterImageUrl, name: twitterName, text: purpose, twitterScreenName: twitterScreenName)
                 }else{
                     //print("exsitingID")
+                    //self.saveMyApp(twitterImageUrl, name: twitterName, text: "test", twitterId: twitterId)
+
                 }
             }else{
+                purpose = connectFirebase.read_purpose(beacon_id)
                 twitterId = connectFirebase.read_userID(beacon_id)
                 twitterName = connectFirebase.read_userName(beacon_id)
                 twitterImageUrl = connectFirebase.read_image(beacon_id)
+                twitterScreenName = connectFirebase.read_screenName(beacon_id)
                 //print("could not get twitterInfo")
             }
             //var purpose = connectFirebase.read_purpose(id)
@@ -230,7 +237,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
            // print(twitterName)
            // print(twitterImageUrl)
             //print(knownBeacons)
-
         }else{
             self.noFriendLabel.hidden = false
             self.noFriendLabel.text = "周りに誰もいません。"
@@ -374,6 +380,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
             handler:{
                 (action:UIAlertAction!) -> Void in
                 print("いいね！")
+                self.saveLikeIds(self.beacon_id)
                 self.connectFirebase.set_like(self.beacon_id)
                 self.removeImage()
         })
@@ -399,4 +406,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIScrollViewD
     func removeImage(){
         imgView.hidden = true
     }
+    func saveMyApp(url:String,name:String,text:String,twitterScreenName:String){
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        myApp.imageUrl.append(url)
+        myApp.imageTitles.append(name)
+        myApp.imageDescriptions.append(text)
+        myApp.twitterScreenNames.append(twitterScreenName)
+//        print(myApp.imageUrl)
+//        print(myApp.imageTitles)
+//        print(myApp.imageDescriptions)
+//        print(myApp.twitterScreenNames)
+    }
+    func saveLikeIds(id:String){
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        myApp.likeIds.append(id)
+        print(myApp.likeIds)
+    }
+
 }

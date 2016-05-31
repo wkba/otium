@@ -17,6 +17,8 @@ class FirstVC: UIViewController {
     
     var UserName:String!
     var UserImage:String!
+    var otium_major = ""
+    var otium_minor = ""
     let client = TWTRAPIClient()
     private var json:NSDictionary!
     private let connectFirebase = ConnectFirebase()
@@ -46,8 +48,8 @@ class FirstVC: UIViewController {
 //                NSLog("Login error: %@", error!.localizedDescription);
 //            }
             self.UserName = session!.userName
-            self.getStatus(session!.userID)
             self.setUserInfo()
+            self.getStatus(session!.userID)
             self.goMainVC()
         }
         
@@ -96,7 +98,7 @@ class FirstVC: UIViewController {
                 self.connectFirebase.set_userName(fixed_json["name"].string!)
                 self.connectFirebase.set_twitterName(fixed_json["screen_name"].string!)
                 self.connectFirebase.set_image(fixed_json["profile_image_url"].string!)
-                
+                self.saveMyInfo(fixed_json["profile_image_url"].string!, name: fixed_json["name"].string!, text: "未設定", twitterScreenName: fixed_json["screen_name"].string!, beacondId: self.otium_major + self.otium_minor)
             } catch let jsonError as NSError {
                 print("json error: \(jsonError.localizedDescription)")
             }
@@ -116,8 +118,6 @@ class FirstVC: UIViewController {
     func setUserInfo(){
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        var otium_major = ""
-        var otium_minor = ""
         
         //前回の保存内容があるかどうかを判定
         if((defaults.objectForKey("otium_major")) != nil){
@@ -142,6 +142,16 @@ class FirstVC: UIViewController {
         connectFirebase.inital_set(otium_major+otium_minor)
         connectFirebase.set_major(otium_major)
         connectFirebase.set_minor(otium_minor)
+    }
+    
+    func saveMyInfo(url:String,name:String,text:String,twitterScreenName:String,beacondId:String){
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        myApp.myInfo.append(url)
+        myApp.myInfo.append(name)
+        myApp.myInfo.append(text)
+        myApp.myInfo.append(twitterScreenName)
+        myApp.myInfo.append(beacondId)
+        print(myApp.myInfo)
     }
     
 }

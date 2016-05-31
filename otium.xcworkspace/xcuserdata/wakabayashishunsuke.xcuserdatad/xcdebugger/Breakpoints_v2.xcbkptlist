@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "otium/FirstVC.swift"
-            timestampString = "485955523.975806"
+            timestampString = "486318253.955583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "getStatus(_:)"
             landmarkType = "5">
          </BreakpointContent>

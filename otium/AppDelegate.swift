@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    var imageUrl:[String] = []
+    var imageTitles:[String] = []
+    var imageDescriptions:[String] = []
+    var twitterScreenNames:[String] = []
+    var likeIds:[String] = []
+
+    var myInfo:[String] = []
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //removed to MainVC
         //Peripheral.startAdvertising()

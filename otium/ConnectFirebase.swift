@@ -18,6 +18,8 @@ class ConnectFirebase{
     var major = "error"
     var minor = "error"
     var name = "error"
+    var screenName = "error"
+
     var id = "error"
     var imageUrl = "error"
     var outCount = "error"
@@ -115,6 +117,13 @@ class ConnectFirebase{
         })
         return name
     }
+    func read_screenName(id:String) -> String{
+        targetURL.childByAppendingPath(id).childByAppendingPath("twitterName").observeEventType(.Value, withBlock: {
+            snapshot in
+            self.screenName = "\(snapshot.value)"
+        })
+        return screenName
+    }
     func read_image(id:String) -> String{
         targetURL.childByAppendingPath(id).childByAppendingPath("image").observeEventType(.Value, withBlock: {
             snapshot in
@@ -133,7 +142,7 @@ class ConnectFirebase{
         })
         return comment
     }
-    func read_purpose(purpose:String)->String{
+    func read_purpose(id:String)->String{
         targetURL.childByAppendingPath(id).childByAppendingPath("purpose").observeEventType(.Value, withBlock: {
             snapshot in
             self.purpose = "\(snapshot.value)"
@@ -164,5 +173,13 @@ class ConnectFirebase{
         return String(userURL)
     }
     
+    func like_list_array(id:String)->[String]{
+        var ids:[String] = []
+        targetURL.childByAppendingPath(id).childByAppendingPath("like_list").observeEventType(.Value, withBlock: {
+            snapshot in
+            ids.append("\(snapshot.value)")
+        })
+        return ids
+    }
     
 }

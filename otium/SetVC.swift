@@ -13,41 +13,53 @@ import Firebase
 class SetVC: FormViewController {
     
     private let connectFirebase = ConnectFirebase()
+    var myInfo:[String] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchMyInfo()
+        print(myInfo)
     
         form +++ Section()
             <<< TextRow("Name"){
                 $0.title = "名前を入力"
-                $0.placeholder = "JohnLennonWars"
+                $0.placeholder = myInfo[1]
                 }.onChange{row in
-                    
-                    let userDefault = NSUserDefaults.standardUserDefaults()
-                    userDefault.setValue(row.value, forKey: "Name")
-                    
-            }
-            <<< SegmentedRow<String>("sex"){
-                $0.options = ["男", "女"]
-                $0.title = "性別"
-                $0.value = "男"
-                }.onChange{ row in
-                    let userDefault = NSUserDefaults.standardUserDefaults()
-                    userDefault.setValue(row.value, forKey: "Sex")
+                    self.saveName(row.value!)
         }
+        
         form +++ Section()
             <<< TextRow("TextFiled"){
                 $0.title = "目的"
-                $0.placeholder = "歌を歌いたい"
+                $0.placeholder = myInfo[2]
+                }.onChange{row in
+                    self.savePurpose(row.value!)
         }
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-   
+    func fetchMyInfo(){
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        self.myInfo = myApp.myInfo
+    }
+    func saveName(name:String){
+        self.myInfo[1] = name
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        myApp.myInfo[1] = name
+        self.connectFirebase.set_userName(name)
+        print("savedName:\(myInfo)")
+    }
+    func savePurpose(purpose:String){
+        self.myInfo[2] = purpose
+        let myApp = UIApplication.sharedApplication().delegate as! AppDelegate
+        myApp.myInfo[2] = purpose
+        self.connectFirebase.set_purpose(purpose)
+        print("savedPurpose:\(myInfo)")
+    }
     
 }
